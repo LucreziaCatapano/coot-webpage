@@ -1,0 +1,55 @@
+<h1><em>Coot</em> Cryo-EM Practical</h1>
+
+<p> <strong> This is out of date. We have a better tutorial now </strong>  <p>
+
+<p>Aim: we will fit a domain of the human respiratory complex I matrix arm starting from an empty
+(part of the) map.</p>
+<p>WARNING::This is non-trivial, a familiarity with Coot is assumed. This is not like
+the basic tutorial.  This is approximately how I use coot. It is tricky because
+fitting cryo-EM maps is tricky.</p>
+<p>Put the scripting files in $HOME/.coot-preferences (make the directory if needed)</p>
+<p>Using <em>Coot</em>:</p>
+<ul>
+<li>
+<p>read in the map for EMD-6771</p>
+</li>
+<li>
+<p>read <code>5xtb-sans-J.pdb</code></p>
+</li>
+<li>
+<p>Fetch the model for accession code <code>3wj7</code> from PDBe</p>
+</li>
+<li>
+<p>Use Copy Fragment to extract the protein <code>A</code> chain from this</p>
+</li>
+<li>
+<p>Centre on the unmodelled density for the <code>J</code> chain</p>
+</li>
+<li>
+<p>Move the <code>A</code> fragment from <code>3wj7</code> to here</p>
+</li>
+<li>
+<p>Morph → Jiggle fit this chain (this can take ~60 seconds)</p>
+</li>
+<li>
+<p>Using the <code>ProSMART</code> module, generate 4.3A self-restraints for this (now fitted) chain</p>
+</li>
+<li>
+<p>Chain-refine (Shift E)</p>
+</li>
+<li>
+<p>Calculate → Scripting → Python:
+<code>set_alignment_gap_and_space_penalty(-6, -0.4)</code></p>
+</li>
+<li>
+<p>Calculate → Align and mutate the A-chain-fragment to the seqence of the J chain</p>
+</li>
+<li>
+<p>Use the Validation tools to find problematic regions of the model and fix them.</p>
+</li>
+</ul>
+<p>Hint 1: Density Fit analysis is a good tool to start off.</p>
+<p>Hint 2: Use the sequence file <code>J-chain.seq</code> for alignment</p>
+<p>End: You may notice that theres a ligand in the middle of the protein - it's NDP.
+Get an instance of NDP and fit it to the map using
+Calculate → Other Modelling Tools → Ligand Fitting</p>

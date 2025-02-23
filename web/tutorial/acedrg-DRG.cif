@@ -1,0 +1,157 @@
+#loop_
+#_software
+#_version
+#_purpose
+#acedrg                           188              "dictionary generator"                  
+#acedrg_database                11                 "data source"                           
+#rdkit                         2017.03.2           "chemistry perception"
+#refmac5                       5.8.0158            "optimization tool"                     
+#
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+DRG     DRG     .              non-polymer     18     10     .     
+#
+data_comp_DRG
+#
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+DRG     C1      C       CR6     0       -1.488      0.440       0.122       
+DRG     C2      C       CR16    0       -0.115      0.735       0.160       
+DRG     C3      C       CR6     0       0.822       -0.291      0.283       
+DRG     C4      C       CR16    0       0.390       -1.617      0.374       
+DRG     C5      C       CR16    0       -0.967      -1.912      0.338       
+DRG     C6      C       CR16    0       -1.899      -0.896      0.213       
+DRG     N1      N       NH2     0       -2.421      1.458       -0.004      
+DRG     C7      C       C       0       2.286       0.036       0.324       
+DRG     N2      N       NH2     0       2.803       0.756       -0.666      
+DRG     O1      O       O       0       2.976       -0.365      1.274       
+DRG     H1      H       H       0       0.165       1.629       0.098       
+DRG     H2      H       H       0       1.019       -2.311      0.459       
+DRG     H3      H       H       0       -1.255      -2.805      0.399       
+DRG     H4      H       H       0       -2.819      -1.101      0.189       
+DRG     H5      H       H       0       -3.250      1.323       0.248       
+DRG     H6      H       H       0       -2.178      2.234       -0.334      
+DRG     H7      H       H       0       3.660       1.000       -0.639      
+DRG     H8      H       H       0       2.310       0.999       -1.370      
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.aromatic
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+DRG          C1          C2      DOUBLE       y     1.397   0.010
+DRG          C2          C3      SINGLE       y     1.387   0.010
+DRG          C3          C4      DOUBLE       y     1.390   0.010
+DRG          C4          C5      SINGLE       y     1.384   0.010
+DRG          C5          C6      DOUBLE       y     1.379   0.010
+DRG          C1          C6      SINGLE       y     1.394   0.010
+DRG          C1          N1      SINGLE       n     1.386   0.020
+DRG          C3          C7      SINGLE       n     1.500   0.010
+DRG          C7          N2      SINGLE       n     1.326   0.010
+DRG          C7          O1      DOUBLE       n     1.241   0.011
+DRG          C2          H1      SINGLE       n     0.939   0.013
+DRG          C4          H2      SINGLE       n     0.941   0.017
+DRG          C5          H3      SINGLE       n     0.940   0.016
+DRG          C6          H4      SINGLE       n     0.943   0.018
+DRG          N1          H5      SINGLE       n     0.877   0.020
+DRG          N1          H6      SINGLE       n     0.877   0.020
+DRG          N2          H7      SINGLE       n     0.891   0.020
+DRG          N2          H8      SINGLE       n     0.891   0.020
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+DRG          C2          C1          C6     118.756    1.50
+DRG          C2          C1          N1     120.515    1.50
+DRG          C6          C1          N1     120.730    1.50
+DRG          C1          C2          C3     119.683    1.50
+DRG          C1          C2          H1     119.628    1.50
+DRG          C3          C2          H1     120.690    1.50
+DRG          C2          C3          C4     119.638    1.50
+DRG          C2          C3          C7     119.724    2.66
+DRG          C4          C3          C7     120.638    2.37
+DRG          C3          C4          C5     120.435    1.50
+DRG          C3          C4          H2     119.857    1.50
+DRG          C5          C4          H2     119.708    1.50
+DRG          C4          C5          C6     120.653    1.50
+DRG          C4          C5          H3     119.769    1.50
+DRG          C6          C5          H3     119.578    1.50
+DRG          C5          C6          C1     120.836    1.50
+DRG          C5          C6          H4     119.836    1.50
+DRG          C1          C6          H4     119.329    1.50
+DRG          C1          N1          H5     119.811    2.73
+DRG          C1          N1          H6     119.811    2.73
+DRG          H5          N1          H6     120.379    3.00
+DRG          C3          C7          N2     118.026    1.50
+DRG          C3          C7          O1     119.820    1.50
+DRG          N2          C7          O1     122.155    1.50
+DRG          C7          N2          H7     120.236    2.75
+DRG          C7          N2          H8     120.236    2.75
+DRG          H7          N2          H8     119.529    2.83
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+DRG       const_sp2_sp2_3          N1          C1          C2          C3     180.000   10.00     2
+DRG              const_23          N1          C1          C6          C5     180.000   10.00     2
+DRG             sp2_sp2_1          C2          C1          N1          H5     180.000   10.00     2
+DRG       const_sp2_sp2_6          C1          C2          C3          C7     180.000   10.00     2
+DRG              const_11          C7          C3          C4          C5     180.000   10.00     2
+DRG             sp2_sp2_5          C2          C3          C7          N2     180.000   10.00     2
+DRG              const_13          C3          C4          C5          C6       0.000   10.00     2
+DRG              const_17          C4          C5          C6          C1       0.000   10.00     2
+DRG            sp2_sp2_11          O1          C7          N2          H7       0.000   10.00     2
+loop_
+_chem_comp_plane_atom.comp_id
+_chem_comp_plane_atom.plane_id
+_chem_comp_plane_atom.atom_id
+_chem_comp_plane_atom.dist_esd
+DRG    plan-1          C1   0.020
+DRG    plan-1          C2   0.020
+DRG    plan-1          C3   0.020
+DRG    plan-1          C4   0.020
+DRG    plan-1          C5   0.020
+DRG    plan-1          C6   0.020
+DRG    plan-1          C7   0.020
+DRG    plan-1          H1   0.020
+DRG    plan-1          H2   0.020
+DRG    plan-1          H3   0.020
+DRG    plan-1          H4   0.020
+DRG    plan-1          N1   0.020
+DRG    plan-2          C1   0.020
+DRG    plan-2          H5   0.020
+DRG    plan-2          H6   0.020
+DRG    plan-2          N1   0.020
+DRG    plan-3          C3   0.020
+DRG    plan-3          C7   0.020
+DRG    plan-3          N2   0.020
+DRG    plan-3          O1   0.020
+DRG    plan-4          C7   0.020
+DRG    plan-4          H7   0.020
+DRG    plan-4          H8   0.020
+DRG    plan-4          N2   0.020

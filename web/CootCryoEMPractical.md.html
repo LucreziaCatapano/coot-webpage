@@ -1,0 +1,67 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>CootCryoEMPractical.md</title><style></style></head><body id="preview">
+<h1><a id="_Coot__CryoEM_Practical_0"></a><em>Coot</em> Cryo-EM Practical</h1>
+<p><strong>Aim: we will fit a domain of the human respiratory complex I matrix arm starting from an empty<br>
+(part of the) map.</strong></p>
+<p>WARNING:: This is non-trivial, a familiarity with Coot is assumed. This is not like<br>
+the basic tutorial.  This is approximately how I use coot. It is tricky because<br>
+fitting cryo-EM maps is tricky.</p>
+<p>Put the scripting files in $HOME/.coot-preferences (make the directory if needed)</p>
+<p>Using <em>Coot</em>:</p>
+<ul>
+<li>read in the map for EMD-6771</li>
+</ul>
+<p>Let’s make a smoother map (EMD-6771 is not typical in that it is well sampled and<br>
+not obviously oversharpened). But let’s learn how to do it because that is often<br>
+not the case.</p>
+<ul>
+<li>Extensions → Modules s → Cryo-EM, Cryo-EM s → Multi-sharpen…</li>
+</ul>
+<p>The runs refmac to make an MTZ file <code>starting-map-xxx.mtz</code>. Read it in.</p>
+<ul>
+<li>
+<p>read <code>5xtb-sans-J.pdb</code></p>
+</li>
+<li>
+<p>Fetch the model for accession code <code>3wj7</code> from PDBe</p>
+</li>
+<li>
+<p>Use Draw → Sequence View and Edit → Copy Fragment to extract the protein<br>
+<code>A</code> chain from this (only the protein part)</p>
+</li>
+<li>
+<p>Centre on the unmodelled density for the <code>J</code> chain</p>
+</li>
+<li>
+<p>Move the <code>A</code> fragment from <code>3wj7</code> to here</p>
+</li>
+<li>
+<p>Morph → Jiggle fit this chain (this can take ~60 seconds)</p>
+</li>
+<li>
+<p>Morph ----------- Morph by secondary structure here</p>
+<p>Does it fit? If not, try again. Maybe shift the centre of the molecule by a few Angstroms</p>
+</li>
+<li>
+<p>Using the <code>ProSMART</code> module, generate 4.3A self-restraints for this (now fitted) chain</p>
+</li>
+<li>
+<p>Chain-refine (Shift E)</p>
+</li>
+<li>
+<p>Calculate → Scripting → Python:<br>
+<code>set_alignment_gap_and_space_penalty(-6, -0.4)</code></p>
+</li>
+<li>
+<p>Calculate → Align and mutate the A-chain-fragment to the seqence of the J chain</p>
+</li>
+<li>
+<p>Use the Validation tools to find problematic regions of the model and fix them.</p>
+</li>
+</ul>
+<p>Hint 1: Density Fit analysis is a good tool to start off.</p>
+<p>Hint 2: Use the sequence file <code>J-chain.seq</code> for alignment</p>
+<p>End: You may notice that theres a ligand in the middle of the protein - it’s NDP.<br>
+Get an instance of NDP and fit it to the map using<br>
+Calculate → Other Modelling Tools → Ligand Fitting</p>
+
+</body></html>

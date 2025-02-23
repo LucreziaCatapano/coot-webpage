@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coot-Cryo-EM-basics-v5.md</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="coot-for-cryo-em-the-basics">Coot for Cryo-EM: The Basics</h1>
+<div> By Ana Casañal &amp; Paul Emsley</div>
+This tutorial is designed for 0.9-pre
+<h2 id="start">1: Start</h2>
+<p>Get the files <code>demo-box.tar.gz</code> and put them in the directory from where you launch Coot.  The tar file for the demo box can be found in the “Auxiliary Files” section of the <em>Coot</em> web page (<a href="https://www2.mrc-lmb.cam.ac.uk/personal/pemsley/coot/files/">https://www2.mrc-lmb.cam.ac.uk/personal/pemsley/coot/files/</a>).</p>
+<ul>
+<li>Open Coot</li>
+<li>Keep the terminal window where Coot is running always visible. You will see that as many of the algorithms run they will be writing useful information.</li>
+</ul>
+<h3 id="load-the-tutorial-data">1.1 Load the Tutorial Data</h3>
+<ul>
+<li><strong>Calculate</strong> → <strong>Load Tutorial Model and Data</strong></li>
+<li>Open the <strong>Display Manager</strong></li>
+<li>Delete the difference map</li>
+</ul>
+<h3 id="representation">1.2 Representation</h3>
+<ul>
+<li><strong>Edit</strong> → <strong>Map Parameters…</strong></li>
+<li>A Map Radius of 70Å  is a lot of map, useful for a cryo-EM reconstruction, but for now we are focussing on details:</li>
+<li><strong>Map Radius</strong> → <code>16</code> <em>{sensible for crystallographic map}</em></li>
+<li><strong>Edit</strong> → <strong>Map Colour…</strong></li>
+<li>Change the map colour <em>{see that dark pastel colours are the best}</em></li>
+<li><strong>Display Manager</strong> → <strong>Properties</strong>  → <strong>Solid/Transparent</strong></li>
+<li>Tweak the <strong>Opacity %age</strong></li>
+<li>Useful? Maybe. (About 30% seems best)</li>
+<li>Back to <strong>Standard Lines</strong></li>
+</ul>
+<p>Note: if you have a speedy computer, then you can make a copy of the map (Calculate → Map Tools → Copy Map Molecule…) and use Standard Lines for one and Solid/Transparent for the copied map - that looks quite good and can be helpful. It can be laggy though with a big radius, and that is the opposite of useful.</p>
+<p>Now let’s try with a white background:</p>
+<ul>
+<li><strong>Edit</strong> → <strong>Background Colour</strong> → <strong>White</strong></li>
+<li><em>{this is good for making figures, but you will need a very pastel map colour (not so dark)}</em></li>
+<li>To “highlight” a residue:</li>
+<li><strong>Draw</strong> → <strong>Additional Representation…</strong></li>
+<li><strong>Ball &amp; Stick</strong> → <strong>Add Representation</strong></li>
+</ul>
+<h2 id="navigation">2: Navigation</h2>
+<p>Moving around the molecule:</p>
+<ul>
+<li>Middle-mouse to centre on an atom</li>
+<li>Double-click to toggle the atom label</li>
+<li>“Space” is forwards</li>
+<li>“Shift Space” is backwards</li>
+<li>Middle-mouse click and drag to “pan” the view <em>{just like PyMOL}</em></li>
+</ul>
+<p>To change the “residue to residue” speed:</p>
+<ul>
+<li><strong>Edit</strong> → <strong>Preferences…</strong></li>
+<li><strong>Smooth Recentering</strong> → <code>10</code> steps <em>{smaller numbers are quicker}</em></li>
+</ul>
+<p><strong>Add Here Dragged Map Off</strong></p>
+<p>You might like the residue reorienting mode:</p>
+<ul>
+<li><strong>Calculate</strong> → <strong>Scripting</strong>  →  <strong>Python</strong></li>
+<li><code>set_reorienting_next_residue_mode(1)</code></li>
+<li>Now the main-chain orientation of the next residue will rotate to match the current one - that might take a bit of getting used to, so you can turn it off:</li>
+<li><code>set_reorienting_next_residue_mode(0)</code></li>
+</ul>
+<h2 id="short-cuts-and-interface">3: Short-cuts and Interface</h2>
+<p>Go To Residue:</p>
+<ul>
+<li>“Ctrl G” <em>{see the little dialog?}</em></li>
+<li>Type the residue number (and the chain id, if needed)</li>
+<li>Also 3 single-letter-code letters, e.g.<code>HEY</code></li>
+</ul>
+<p>You can toggle spin and rock the view with:<br>
+- “I”, “Ctrl R”</p>
+<h3 id="install-a-few-buttons">3.1 Install a Few Buttons</h3>
+<ul>
+<li>Right-mouse click on the right-hand side of the horizontal tool-button bar</li>
+<li>Add “<strong>Sphere Refine +</strong>”, “<strong>Tandem Refine</strong>” and “<strong>Backrub Rotamers</strong>”</li>
+<li>Toggle on the “<strong>Backrub Rotamers</strong>” button</li>
+</ul>
+<h3 id="install-key-bindings">3.2 Install Key-bindings</h3>
+<ul>
+<li><strong>Edit</strong> → <strong>Settings</strong> → <strong>Install Template Key-bindings</strong></li>
+<li><strong>Edit</strong> → <strong>Settings</strong> → <strong>Key-Bindings</strong> <em>{see what the keybindings are}</em></li>
+</ul>
+<h3 id="install-a-few-extensions">3.3 Install a Few Extensions</h3>
+<ul>
+<li><strong>Calculate</strong> → <strong>Scripting</strong> → <strong>Python</strong></li>
+<li><code>curlew()</code></li>
+<li>From there, select and install “<strong>Black Box Morph and Fit</strong>”, “<strong>Chain Refine</strong>” and “<strong>Morph</strong>”</li>
+</ul>
+<h3 id="try-it-out">3.4 Try it out</h3>
+<p>Use the cursor to navigate using the map</p>
+<ul>
+<li>“G” <em>{brings the blob under the cursor to the centre of the screen}</em></li>
+</ul>
+<p>To undo last navigation/screen recentre:</p>
+<ul>
+<li>“U”</li>
+</ul>
+<p>Also:</p>
+<ul>
+<li>“+” and “-” Change the contour level</li>
+<li>“M” and “N” for zoom in and out</li>
+<li>“D” and “F” for depth of field/clipping planes, increase and decrease</li>
+</ul>
+<h3 id="quick-save-as">3.5 Quick Save-As</h3>
+<p>The new version of coot is a lot more advanced and a bit more crashy than the standard version. It’s a good idea to save every now and then - making it easier to recover.</p>
+<ul>
+<li>“Ctrl S” <em>{for quick-save-as}</em></li>
+</ul>
+<p>Quick Save as will save all models that have not been saved and will save the session too.</p>
+<h2 id="model-building">4: Model-Building</h2>
+<h3 id="find-and-fix-a-bad-rotamer">4.1 Find and Fix a Bad Rotamer</h3>
+<ul>
+<li><strong>Validate</strong> → <strong>Density Fit Analysis…</strong></li>
+<li>Click on the bar for residue A89</li>
+</ul>
+<p>Fix the Rotamer, First the Traditional usage</p>
+<ul>
+<li>click on <strong>Auto-Fit Rotamer</strong> in the vertical tool-bar</li>
+</ul>
+<p>But let’s use the Key-bindings to speeds up, so undo the previous fit:</p>
+<ul>
+<li>“Ctrl Z”</li>
+<li>“J” <em>{auto-fit rotamer}</em></li>
+</ul>
+<p>And to tidy up after that:</p>
+<ul>
+<li>“X”  <em>{does real-space refinement}</em></li>
+</ul>
+<h3 id="lets-find-something-else-to-fix">4.2 Let’s Find Something Else to Fix</h3>
+<p><strong>Validate</strong> → <strong>Ramachandran Plot</strong></p>
+<ul>
+<li>click on “<strong>Outliers Only</strong>”</li>
+<li>click on Residue A41</li>
+</ul>
+<p>Note: Peptide Flags:<br>
+- Green: <em>cis</em>-peptide in front of a PRO<br>
+- Yellow: twisted <em>trans</em>-peptide<br>
+- Red: <em>cis</em>-peptide in front of a non-PRO</p>
+<p>When it comes to fixing up model-building/validation problems,<br>
+often times “Neighbour Refine” is the first tool to try. If we try that, we see that it doesn’t work in this case. We have to look and think. We see that the one of the peptides is facing the wrong way and we need to flip it:</p>
+<p>So, let’s fix this with Real Space Refine and flipping:</p>
+<ul>
+<li>“H” <em>{does a neighbour Refine}</em></li>
+<li>“Q”  <em>{does a pep-flip}</em></li>
+<li>“H”  <em>{tidy up with a RSR}</em></li>
+</ul>
+<h2 id="now-to-the-demo-box">5: Now To the Demo Box!</h2>
+<p>For these refinements, it might be useful to use Coot Probe dots:</p>
+<p><strong>Calculate</strong> → <strong>Scripting</strong> → <strong>Python</strong></p>
+<ul>
+<li><code>set_do_coot_probe_dots_during_refine(1)</code></li>
+</ul>
+<p>OK, let’s find the script and run it:</p>
+<ul>
+<li><strong>Calculate</strong> → <strong>Run Script</strong> → <code>demo-box-of-buttons-madrid.scm</code></li>
+<li><strong>Crankshaft Peptide</strong>  <em>{brings the problem to the centre of the screen}</em></li>
+<li>Take a look at the problem…
+<ul>
+<li><em>{Yikes!}</em></li>
+</ul>
+</li>
+<li><strong>Morph</strong> → <strong>Crankshaft</strong></li>
+<li>Does it fit better now?</li>
+<li><strong>Sphere Refine</strong>
+<ul>
+<li><em>{things improve, balls are green}</em></li>
+<li><strong>OK</strong></li>
+</ul>
+</li>
+<li><strong>Wonky N-terminus</strong></li>
+<li><strong>Rotamer Markup On</strong></li>
+<li>Centre on Residue A4</li>
+<li><strong>Tandem Refine</strong></li>
+<li><em>{Play with it}</em> - make the balls go green and remove the clashes</li>
+</ul>
+<p>Now try that with a blurred map:</p>
+<ul>
+<li>Undo</li>
+<li><strong>Calculate</strong> → <strong>Map Sharpen and Blur…</strong></li>
+<li>Blur to about 60 or 70Å²  <em>{to resemble cryo-EM map}</em></li>
+<li><strong>Tandem Refine</strong> again</li>
+</ul>
+<p>The point of this exercise is for you to see/learn how coot behaves with lower resolution data.</p>
+</div>
+</body>
+
+</html>

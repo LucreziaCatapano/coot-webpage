@@ -1,0 +1,1653 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 5.1, http://www.gnu.org/software/texinfo/ -->
+
+<title>The Coot FAQ</title>
+
+<meta name="description" content="The Coot FAQ">
+<meta name="keywords" content="The Coot FAQ">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="#Top" rel="start" title="Top">
+<link href="#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="dir.html#Top" rel="up" title="(dir)">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<h1 class="settitle" align="center">The Coot FAQ</h1>
+
+
+
+<a name="SEC_Contents"></a>
+<h2 class="contents-heading">Table of Contents</h2>
+
+<div class="contents">
+
+<ul class="no-bullet">
+  <li><a name="toc-Citing-Coot" href="#Citing">1 Citing Coot</a></li>
+  <li><a name="toc-Building-and-Installing-1" href="#Building-and-Installing">2 Building and Installing</a>
+  <ul class="no-bullet">
+    <li><a name="toc-I-have-Mac-OS-X_002e-How-do-I-get-coot_003f-1" href="#I-have-Mac-OS-X_002e-How-do-I-get-coot_003f">2.1 I have Mac OS X. How do I get coot?</a></li>
+    <li><a name="toc-How-do-I-make-the-binary-release-work_003f-1" href="#How-do-I-make-the-binary-release-work_003f">2.2 How do I make the binary release work?</a></li>
+    <li><a name="toc-Which-binary-tar-file-shall-I-use_003f-1" href="#Which-binary-tar-file-shall-I-use_003f">2.3 Which binary tar file shall I use?</a>
+    <ul class="no-bullet">
+      <li><a name="toc-Coot-on-64_002dbit-RHEL-6-1" href="#Coot-on-64_002dbit-RHEL-6">2.3.1 Coot on 64-bit RHEL 6</a></li>
+      <li><a name="toc-Additional-Note-for-SuSE-9_002e1-1" href="#Additional-Note-for-SuSE-9_002e1">2.3.2 Additional Note for SuSE 9.1</a></li>
+      <li><a name="toc-Additional-Note-for-SuSE-9_002e3-1" href="#Additional-Note-for-SuSE-9_002e3">2.3.3 Additional Note for SuSE 9.3</a></li>
+      <li><a name="toc-Additional-Note-for-SuSE-10_002e1-1" href="#Additional-Note-for-SuSE-10_002e1">2.3.4 Additional Note for SuSE 10.1</a></li>
+    </ul></li>
+    <li><a name="toc-What-are-the-md5sums_003f-1" href="#What-are-the-md5sums_003f">2.4 What are the md5sums?</a></li>
+    <li><a name="toc-I-get-a-libpt-error-when-I-try-to-start-coot-on-Fedora-Core-2-1" href="#I-get-a-libpt-error-when-I-try-to-start-coot-on-Fedora-Core-2">2.5 I get a libpt error when I try to start coot on Fedora Core 2</a></li>
+    <li><a name="toc-I-get-a-tiff-error-when-I-try-to-start-coot-on-Mac-OS-X-1" href="#I-get-a-tiff-error-when-I-try-to-start-coot-on-Mac-OS-X">2.6 I get a tiff error when I try to start coot on Mac OS X</a></li>
+    <li><a name="toc-I-get-a-jpeg-error-when-I-try-to-start-coot-0_002e1_002e2-on-my-Intel-Mac-1" href="#I-get-a-jpeg-error-when-I-try-to-start-coot-0_002e1_002e2-on-my-Intel-Mac">2.7 I get a jpeg error when I try to start coot 0.1.2 on my Intel Mac</a></li>
+    <li><a name="toc-I-get-a-glut-error-when-I-try-to-start-coot-on-Fedora-Core-3-1" href="#I-get-a-glut-error-when-I-try-to-start-coot-on-Fedora-Core-3">2.8 I get a glut error when I try to start coot on Fedora Core 3</a></li>
+    <li><a name="toc-When-I-start-Coot-it-crashes-after-load-_0022hello_002escm_0022-1" href="#When-I-start-Coot-it-crashes-after-load-_0022hello_002escm_0022">2.9 When I start Coot it crashes after <tt>load &quot;hello.scm&quot;</tt></a></li>
+    <li><a name="toc-How-do-I-compile-coot-and-its-dependencies_003f-1" href="#How-do-I-compile-coot-and-its-dependencies_003f">2.10 How do I compile coot and its dependencies?</a></li>
+    <li><a name="toc-How-do-I-report-a-bug_003f-1" href="#How-do-I-report-a-bug_003f">2.11 How do I report a bug?</a></li>
+  </ul></li>
+  <li><a name="toc-Configuration-Problems-1" href="#Configuration-Problems">3 Configuration Problems</a>
+  <ul class="no-bullet">
+    <li><a name="toc-I-get-a-strange-message-when-I-use-coot_002dscheme-files-1" href="#I-get-a-strange-message-when-I-use-coot_002dscheme-files">3.1 I get a strange message when I use coot-scheme files</a></li>
+    <li><a name="toc-I-get-bizarre-connectivity-and-other-weirdness-on-reading-files-1" href="#I-get-bizarre-connectivity-and-other-weirdness-on-reading-files">3.2 I get bizarre connectivity and other weirdness on reading files</a></li>
+    <li><a name="toc-On-my-Mac-the-menu-fonts-are-too-big-_002d-how-can-I-make-them-smaller_003f-1" href="#On-my-Mac-the-menu-fonts-are-too-big-_002d-how-can-I-make-them-smaller_003f">3.3 On my Mac the menu fonts are too big - how can I make them smaller?</a></li>
+  </ul></li>
+  <li><a name="toc-Using-Coot-1" href="#Using-Coot">4 Using Coot</a>
+  <ul class="no-bullet">
+    <li><a name="toc-How-does-it-look-when-Coot-starts-properly_003f-1" href="#How-does-it-look-when-Coot-starts-properly_003f">4.1 How does it look when Coot starts properly?</a></li>
+    <li><a name="toc-I-get-funny-messages-when-starting-Coot-_002d-should-I-worry_003f-1" href="#I-get-funny-messages-when-starting-Coot-_002d-should-I-worry_003f">4.2 I get funny messages when starting Coot - should I worry?</a></li>
+    <li><a name="toc-I-get-funny-messages-when-finishing-Coot-_002d-should-I-worry_003f-1" href="#I-get-funny-messages-when-finishing-Coot-_002d-should-I-worry_003f">4.3 I get funny messages when finishing Coot - should I worry?</a></li>
+    <li><a name="toc-On-Fedora-systems-how-do-I-make-the-window-focus-more-useful_003f-1" href="#On-Fedora-systems-how-do-I-make-the-window-focus-more-useful_003f">4.4 On Fedora systems how do I make the window focus more useful?</a></li>
+    <li><a name="toc-On-Mac-OSX-how-do-I-make-the-window-focus-more-useful_003f-1" href="#On-Mac-OSX-how-do-I-make-the-window-focus-more-useful_003f">4.5 On Mac OSX how do I make the window focus more useful?</a></li>
+    <li><a name="toc-On-a-Mac-OSX-laptop-how-do-I-work-without-a-mouse_003f-1" href="#On-a-Mac-OSX-laptop-how-do-I-work-without-a-mouse_003f">4.6 On a Mac OSX laptop how do I work without a mouse?</a></li>
+    <li><a name="toc-How-do-I-change-the-contour-level-without-a-scroll_002dwheel-mouse_003f-1" href="#How-do-I-change-the-contour-level-without-a-scroll_002dwheel-mouse_003f">4.7 How do I change the contour level without a scroll-wheel mouse?</a></li>
+    <li><a name="toc-_0022Unmodelled-Blobs_0022-takes-me-to-space-_002d-why_003f-1" href="#g_t_0022Unmodelled-Blobs_0022-takes-me-to-space-_002d-why_003f">4.8 &quot;Unmodelled Blobs&quot; takes me to space - why?</a></li>
+    <li><a name="toc-Where-has-my-screen-text-_0028or-labels_0029-gone_003f-1" href="#Where-has-my-screen-text-_0028or-labels_0029-gone_003f">4.9 Where has my screen text (or labels) gone?</a></li>
+    <li><a name="toc-How-can-I-speed-up-moving-betwee-residues-using-_0060_0060Space_0027_0027_003f-1" href="#How-can-I-speed-up-moving-betwee-residues-using-_0060_0060Space_0027_0027_003f">4.10 How can I speed up moving betwee residues using &ldquo;Space&rdquo;?</a></li>
+    <li><a name="toc-How-do-I-make-the-dialogs-be-in-the-right-place_003f-1" href="#How-do-I-make-the-dialogs-be-in-the-right-place_003f">4.11 How do I make the dialogs be in the right place?</a></li>
+    <li><a name="toc-Does-it-work-in-hardware-stereo_003f-1" href="#Does-it-work-in-hardware-stereo_003f">4.12 Does it work in hardware stereo?</a></li>
+    <li><a name="toc-Does-Coot-work-in-side_002dby_002dside-stereo-mode_003f-1" href="#Does-Coot-work-in-side_002dby_002dside-stereo-mode_003f">4.13 Does Coot work in side-by-side stereo mode?</a></li>
+    <li><a name="toc-Does-Coot-work-with-a-Zalman-stereo-monitor_003f-1" href="#Does-Coot-work-with-a-Zalman-stereo-monitor_003f">4.14 Does Coot work with a Zalman stereo monitor?</a></li>
+    <li><a name="toc-How-do-you-make-the-antialiasing-work-better_003f-1" href="#How-do-you-make-the-antialiasing-work-better_003f">4.15 How do you make the antialiasing work better?</a></li>
+    <li><a name="toc-I-have-problems-reading-a-CNS-map-_0028or-mask_0029-into-Coot-1" href="#I-have-problems-reading-a-CNS-map-_0028or-mask_0029-into-Coot">4.16 I have problems reading a CNS map (or mask) into Coot</a></li>
+    <li><a name="toc-What-are-the-colours-of-the-difference-map-and-can-I-_0022invert_0022-them_003f-1" href="#What-are-the-colours-of-the-difference-map-and-can-I-_0022invert_0022-them_003f">4.17 What are the colours of the difference map and can I &quot;invert&quot; them?</a></li>
+    <li><a name="toc-How-do-I-label-an-atom_003f-1" href="#How-do-I-label-an-atom_003f">4.18 How do I label an atom?</a></li>
+    <li><a name="toc-I-don_0027t-like-your-default-REFMAC-parameters_002e-How-do-I-change-them_003f-1" href="#I-don_0027t-like-your-default-REFMAC-parameters_002e-How-do-I-change-them_003f">4.19 I don&rsquo;t like your default REFMAC parameters. How do I change them?</a></li>
+    <li><a name="toc-How-do-I-put-a-pointer-into-a-blob-of-density_003f-1" href="#How-do-I-put-a-pointer-into-a-blob-of-density_003f">4.20 How do I put a pointer into a blob of density?</a></li>
+    <li><a name="toc-How-do-I-_0022grab_0022-just-one-atom-in-Real-Space-Refinement_002fRegularization_003f-1" href="#How-do-I-_0022grab_0022-just-one-atom-in-Real-Space-Refinement_002fRegularization_003f">4.21 How do I &quot;grab&quot; just one atom in Real Space Refinement/Regularization?</a></li>
+    <li><a name="toc-My-sidechains-are-being-sucked-into-the-density-for-metal-_002d-how-do-I-stop-that_003f-1" href="#My-sidechains-are-being-sucked-into-the-density-for-metal-_002d-how-do-I-stop-that_003f">4.22 My sidechains are being sucked into the density for metal - how do I stop that?</a></li>
+    <li><a name="toc-My-Density-Fit-Graph-bars-are-all-red-_002d-how-do-I-fix-that_003f-1" href="#My-Density-Fit-Graph-bars-are-all-red-_002d-how-do-I-fix-that_003f">4.23 My Density Fit Graph bars are all red - how do I fix that?</a></li>
+    <li><a name="toc-How-do-I-bind-a-function-to-a-key_003f-1" href="#How-do-I-bind-a-function-to-a-key_003f">4.24 How do I bind a function to a key?</a></li>
+    <li><a name="toc-How-do-I-force-Coot-to-clean-up-all-the-time_003f-1" href="#How-do-I-force-Coot-to-clean-up-all-the-time_003f">4.25 How do I force Coot to clean up all the time?</a></li>
+    <li><a name="toc-I-can_0027t-mutate-my-broken-residue-1" href="#I-can_0027t-mutate-my-broken-residue">4.26 I can&rsquo;t mutate my broken residue</a></li>
+    <li><a name="toc-How-do-I-read-a-coordinates-file-with-duplicate-residue-numbers_003f-1" href="#How-do-I-read-a-coordinates-file-with-duplicate-residue-numbers_003f">4.27 How do I read a coordinates file with duplicate residue numbers?</a></li>
+    <li><a name="toc-Can-I-make-the-spin-mode-rotate-slower_003f-1" href="#Can-I-make-the-spin-mode-rotate-slower_003f">4.28 Can I make the spin mode rotate slower?</a></li>
+    <li><a name="toc-Does-Coot-use-CONNECT-records_003f-1" href="#Does-Coot-use-CONNECT-records_003f">4.29 Does Coot use CONNECT records?</a></li>
+    <li><a name="toc-Does-Coot-use-LINK-records_003f-1" href="#Does-Coot-use-LINK-records_003f">4.30 Does Coot use LINK records?</a></li>
+    <li><a name="toc-How-do-I-read-many-PDB-files-on-the-command-line_003f-1" href="#How-do-I-read-many-PDB-files-on-the-command-line_003f">4.31 How do I read many PDB files on the command line?</a></li>
+    <li><a name="toc-How-do-I-setup-auto_002dcompletion-of-command-line-options_003f-1" href="#How-do-I-setup-auto_002dcompletion-of-command-line-options_003f">4.32 How do I setup auto-completion of command line options?</a></li>
+    <li><a name="toc-How-do-2-people-use-Coot-with-the-same-structure_003f-1" href="#How-do-2-people-use-Coot-with-the-same-structure_003f">4.33 How do 2 people use Coot with the same structure?</a></li>
+    <li><a name="toc-How-do-I-find-CIS_002dpeptides-in-my-structure_003f-1" href="#How-do-I-find-CIS_002dpeptides-in-my-structure_003f">4.34 How do I find CIS-peptides in my structure?</a></li>
+    <li><a name="toc-How-do-I-do-a-superposition-on-just-a-part-of-my-structure_003f-1" href="#How-do-I-do-a-superposition-on-just-a-part-of-my-structure_003f">4.35 How do I do a superposition on just a part of my structure?</a></li>
+  </ul></li>
+  <li><a name="toc-Other-Coot-Information-1" href="#Other-Coot-Information">5 Other Coot Information</a>
+  <ul class="no-bullet">
+    <li><a name="toc-Coot-for-Microsoft-Windows-systems_003f-1" href="#Coot-for-Microsoft-Windows-systems_003f">5.1 Coot for Microsoft Windows systems?</a></li>
+    <li><a name="toc-What-database-do-you-use-for-the-Ramachandran-plot_003f-1" href="#What-database-do-you-use-for-the-Ramachandran-plot_003f">5.2 What database do you use for the Ramachandran plot?</a></li>
+    <li><a name="toc-What-library-do-you-use-for-the-Rotamers_003f-1" href="#What-library-do-you-use-for-the-Rotamers_003f">5.3 What library do you use for the Rotamers?</a></li>
+    <li><a name="toc-How-do-I-search-the-Manuals-and-the-Mailing-list-Archive_003f-1" href="#How-do-I-search-the-Manuals-and-the-Mailing-list-Archive_003f">5.4 How do I search the Manuals and the Mailing list Archive?</a></li>
+    <li><a name="toc-What-do-those-abreviations-mean_003f-1" href="#What-do-those-abreviations-mean_003f">5.5 What do those abreviations mean?</a></li>
+  </ul></li>
+</ul>
+</div>
+
+
+<a name="Top"></a>
+<div class="header">
+<p>
+Next: <a href="#Citing" accesskey="n" rel="next">Citing</a>, Up: <a href="dir.html#Top" accesskey="u" rel="up">(dir)</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="The-Coot-FAQ"></a>
+<h1 class="top">The Coot FAQ</h1>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="#Citing" accesskey="1">Citing</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Building-and-Installing" accesskey="2">Building and Installing</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Configuration-Problems" accesskey="3">Configuration Problems</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Using-Coot" accesskey="4">Using Coot</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Other-Coot-Information" accesskey="5">Other Coot Information</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+</pre></th></tr><tr><th colspan="3" align="left" valign="top"><pre class="menu-comment"> &mdash; The Detailed Node Listing &mdash;
+
+Building and Installing
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="#I-have-Mac-OS-X_002e-How-do-I-get-coot_003f" accesskey="6">I have Mac OS X. How do I get coot?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-do-I-make-the-binary-release-work_003f" accesskey="7">How do I make the binary release work?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Which-binary-tar-file-shall-I-use_003f" accesskey="8">Which binary tar file shall I use?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#What-are-the-md5sums_003f" accesskey="9">What are the md5sums?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#I-get-a-libpt-error-when-I-try-to-start-coot-on-Fedora-Core-2">I get a libpt error when I try to start coot on Fedora Core 2</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#I-get-a-tiff-error-when-I-try-to-start-coot-on-Mac-OS-X">I get a tiff error when I try to start coot on Mac OS X</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#I-get-a-jpeg-error-when-I-try-to-start-coot-0_002e1_002e2-on-my-Intel-Mac">I get a jpeg error when I try to start coot 0.1.2 on my Intel Mac</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#I-get-a-glut-error-when-I-try-to-start-coot-on-Fedora-Core-3">I get a glut error when I try to start coot on Fedora Core 3</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#When-I-start-Coot-it-crashes-after-load-_0022hello_002escm_0022">When I start Coot it crashes after <tt>load &quot;hello.scm&quot;</tt></a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-do-I-compile-coot-and-its-dependencies_003f">How do I compile coot and its dependencies?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-do-I-report-a-bug_003f">How do I report a bug?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+Which binary tar file shall I use?
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="#Coot-on-64_002dbit-RHEL-6">Coot on 64-bit RHEL 6</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Additional-Note-for-SuSE-9_002e1">Additional Note for SuSE 9.1</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Additional-Note-for-SuSE-9_002e3">Additional Note for SuSE 9.3</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Additional-Note-for-SuSE-10_002e1">Additional Note for SuSE 10.1</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+Configuration Problems
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="#I-get-a-strange-message-when-I-use-coot_002dscheme-files">I get a strange message when I use coot-scheme files</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#I-get-bizarre-connectivity-and-other-weirdness-on-reading-files">I get bizarre connectivity and other weirdness on reading files</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#On-my-Mac-the-menu-fonts-are-too-big-_002d-how-can-I-make-them-smaller_003f">On my Mac the menu fonts are too big - how can I make them smaller?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+Using Coot
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="#How-does-it-look-when-Coot-starts-properly_003f">How does it look when Coot starts properly?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#I-get-funny-messages-when-starting-Coot-_002d-should-I-worry_003f">I get funny messages when starting Coot - should I worry?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#I-get-funny-messages-when-finishing-Coot-_002d-should-I-worry_003f">I get funny messages when finishing Coot - should I worry?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#On-Fedora-systems-how-do-I-make-the-window-focus-more-useful_003f">On Fedora systems how do I make the window focus more useful?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#On-Mac-OSX-how-do-I-make-the-window-focus-more-useful_003f">On Mac OSX how do I make the window focus more useful?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#On-a-Mac-OSX-laptop-how-do-I-work-without-a-mouse_003f">On a Mac OSX laptop how do I work without a mouse?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-do-I-change-the-contour-level-without-a-scroll_002dwheel-mouse_003f">How do I change the contour level without a scroll-wheel mouse?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#g_t_0022Unmodelled-Blobs_0022-takes-me-to-space-_002d-why_003f">&quot;Unmodelled Blobs&quot; takes me to space - why?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Where-has-my-screen-text-_0028or-labels_0029-gone_003f">Where has my screen text (or labels) gone?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-can-I-speed-up-moving-betwee-residues-using-_0060_0060Space_0027_0027_003f">How can I speed up moving betwee residues using ``Space''?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-do-I-make-the-dialogs-be-in-the-right-place_003f">How do I make the dialogs be in the right place?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Does-it-work-in-hardware-stereo_003f">Does it work in hardware stereo?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Does-Coot-work-in-side_002dby_002dside-stereo-mode_003f">Does Coot work in side-by-side stereo mode?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Does-Coot-work-with-a-Zalman-stereo-monitor_003f">Does Coot work with a Zalman stereo monitor?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-do-you-make-the-antialiasing-work-better_003f">How do you make the antialiasing work better?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#I-have-problems-reading-a-CNS-map-_0028or-mask_0029-into-Coot">I have problems reading a CNS map (or mask) into Coot</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#What-are-the-colours-of-the-difference-map-and-can-I-_0022invert_0022-them_003f">What are the colours of the difference map and can I &quot;invert&quot; them?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-do-I-label-an-atom_003f">How do I label an atom?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#I-don_0027t-like-your-default-REFMAC-parameters_002e-How-do-I-change-them_003f">I don't like your default REFMAC parameters. How do I change them?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-do-I-put-a-pointer-into-a-blob-of-density_003f">How do I put a pointer into a blob of density?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-do-I-_0022grab_0022-just-one-atom-in-Real-Space-Refinement_002fRegularization_003f">How do I &quot;grab&quot; just one atom in Real Space Refinement/Regularization?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#My-sidechains-are-being-sucked-into-the-density-for-metal-_002d-how-do-I-stop-that_003f">My sidechains are being sucked into the density for metal - how do I stop that?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#My-Density-Fit-Graph-bars-are-all-red-_002d-how-do-I-fix-that_003f">My Density Fit Graph bars are all red - how do I fix that?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-do-I-bind-a-function-to-a-key_003f">How do I bind a function to a key?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-do-I-force-Coot-to-clean-up-all-the-time_003f">How do I force Coot to clean up all the time?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#I-can_0027t-mutate-my-broken-residue">I can't mutate my broken residue</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-do-I-read-a-coordinates-file-with-duplicate-residue-numbers_003f">How do I read a coordinates file with duplicate residue numbers?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Can-I-make-the-spin-mode-rotate-slower_003f">Can I make the spin mode rotate slower?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Does-Coot-use-CONNECT-records_003f">Does Coot use CONNECT records?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Does-Coot-use-LINK-records_003f">Does Coot use LINK records?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-do-I-read-many-PDB-files-on-the-command-line_003f">How do I read many PDB files on the command line?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-do-I-setup-auto_002dcompletion-of-command-line-options_003f">How do I setup auto-completion of command line options?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-do-2-people-use-Coot-with-the-same-structure_003f">How do 2 people use Coot with the same structure?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-do-I-find-CIS_002dpeptides-in-my-structure_003f">How do I find CIS-peptides in my structure?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-do-I-do-a-superposition-on-just-a-part-of-my-structure_003f">How do I do a superposition on just a part of my structure?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+Other Coot Information
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="#Coot-for-Microsoft-Windows-systems_003f">Coot for Microsoft Windows systems?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#What-database-do-you-use-for-the-Ramachandran-plot_003f">What database do you use for the Ramachandran plot?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#What-library-do-you-use-for-the-Rotamers_003f">What library do you use for the Rotamers?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-do-I-search-the-Manuals-and-the-Mailing-list-Archive_003f">How do I search the Manuals and the Mailing list Archive?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#What-do-those-abreviations-mean_003f">What do those abreviations mean?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+</pre></th></tr></table>
+
+
+<hr>
+<a name="Citing"></a>
+<div class="header">
+<p>
+Next: <a href="#Building-and-Installing" accesskey="n" rel="next">Building and Installing</a>, Previous: <a href="#Top" accesskey="p" rel="previous">Top</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="Citing-Coot"></a>
+<h2 class="chapter">1 Citing Coot</h2>
+
+
+
+<p>The reference for Coot has been published:
+You can use this BibTeX database entry (which can be imported 
+into EndNote)... format as you please:
+</p>
+<a name="index-citation"></a>
+<pre class="verbatim">@Article{emsley2010:coot,
+  author =    {Paul Emsley and Bernhard Lohkamp and William G. Scott and Kevin Cowtan},
+  title =     {Features and Development of Coot},
+  journal =   {Acta Crystallographica Section D - Biological Crystallography},
+  year =      2010,
+  volume =    66,
+  pages  =    486-501
+}
+
+</pre>
+
+
+
+<p>The Coot paper has published in the proceedings of the 2009 CCP4 Study Weekend.
+</p>
+<p>You can download the 2010 paper here:
+</p>
+<ul>
+<li> <a href="http://journals.iucr.org/d/issues/2010/04/00/ba5144/ba5144.pdf">http://journals.iucr.org/d/issues/2010/04/00/ba5144/ba5144.pdf</a>
+</li></ul>
+
+<p>For the sake of completeness, you can download the old 2004 paper here:
+</p>
+<ul>
+<li> <a href="http://journals.iucr.org/d/issues/2004/12/01/isscontsbdy.html">http://journals.iucr.org/d/issues/2004/12/01/isscontsbdy.html</a>
+</li></ul>
+
+<hr>
+<a name="Building-and-Installing"></a>
+<div class="header">
+<p>
+Next: <a href="#Configuration-Problems" accesskey="n" rel="next">Configuration Problems</a>, Previous: <a href="#Citing" accesskey="p" rel="previous">Citing</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="Building-and-Installing-1"></a>
+<h2 class="chapter">2 Building and Installing</h2>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="#I-have-Mac-OS-X_002e-How-do-I-get-coot_003f" accesskey="1">I have Mac OS X. How do I get coot?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-do-I-make-the-binary-release-work_003f" accesskey="2">How do I make the binary release work?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Which-binary-tar-file-shall-I-use_003f" accesskey="3">Which binary tar file shall I use?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#What-are-the-md5sums_003f" accesskey="4">What are the md5sums?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#I-get-a-libpt-error-when-I-try-to-start-coot-on-Fedora-Core-2" accesskey="5">I get a libpt error when I try to start coot on Fedora Core 2</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#I-get-a-tiff-error-when-I-try-to-start-coot-on-Mac-OS-X" accesskey="6">I get a tiff error when I try to start coot on Mac OS X</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#I-get-a-jpeg-error-when-I-try-to-start-coot-0_002e1_002e2-on-my-Intel-Mac" accesskey="7">I get a jpeg error when I try to start coot 0.1.2 on my Intel Mac</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#I-get-a-glut-error-when-I-try-to-start-coot-on-Fedora-Core-3" accesskey="8">I get a glut error when I try to start coot on Fedora Core 3</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#When-I-start-Coot-it-crashes-after-load-_0022hello_002escm_0022" accesskey="9">When I start Coot it crashes after <tt>load &quot;hello.scm&quot;</tt></a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-do-I-compile-coot-and-its-dependencies_003f">How do I compile coot and its dependencies?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-do-I-report-a-bug_003f">How do I report a bug?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr>
+<a name="I-have-Mac-OS-X_002e-How-do-I-get-coot_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#How-do-I-make-the-binary-release-work_003f" accesskey="n" rel="next">How do I make the binary release work?</a>, Up: <a href="#Building-and-Installing" accesskey="u" rel="up">Building and Installing</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="I-have-Mac-OS-X_002e-How-do-I-get-coot_003f-1"></a>
+<h3 class="section">2.1 I have Mac OS X. How do I get coot?</h3>
+
+<p>See Bill Scott&rsquo;s Coot Page:
+</p>
+<ul>
+<li> <a href="http://sage.ucsc.edu/~wgscott/xtal/wiki/index.php/Installing_Coot_on_OS_X">http://sage.ucsc.edu/~wgscott/xtal/wiki/index.php/Installing_Coot_on_OS_X</a>
+</li></ul>
+
+
+<hr>
+<a name="How-do-I-make-the-binary-release-work_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#Which-binary-tar-file-shall-I-use_003f" accesskey="n" rel="next">Which binary tar file shall I use?</a>, Previous: <a href="#I-have-Mac-OS-X_002e-How-do-I-get-coot_003f" accesskey="p" rel="previous">I have Mac OS X. How do I get coot?</a>, Up: <a href="#Building-and-Installing" accesskey="u" rel="up">Building and Installing</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="How-do-I-make-the-binary-release-work_003f-1"></a>
+<h3 class="section">2.2 How do I make the binary release work?</h3>
+
+<p>Download the appropriate tar file for you system. Untar
+    it. Add the bin directory (the one that contains coot and coot-real)
+    to your path and you are ready to go...  You should not need 
+    to edit or use the setup/coot* files.
+</p>
+
+<hr>
+<a name="Which-binary-tar-file-shall-I-use_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#What-are-the-md5sums_003f" accesskey="n" rel="next">What are the md5sums?</a>, Previous: <a href="#How-do-I-make-the-binary-release-work_003f" accesskey="p" rel="previous">How do I make the binary release work?</a>, Up: <a href="#Building-and-Installing" accesskey="u" rel="up">Building and Installing</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="Which-binary-tar-file-shall-I-use_003f-1"></a>
+<h3 class="section">2.3 Which binary tar file shall I use?</h3>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="#Coot-on-64_002dbit-RHEL-6" accesskey="1">Coot on 64-bit RHEL 6</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Additional-Note-for-SuSE-9_002e1" accesskey="2">Additional Note for SuSE 9.1</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Additional-Note-for-SuSE-9_002e3" accesskey="3">Additional Note for SuSE 9.3</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Additional-Note-for-SuSE-10_002e1" accesskey="4">Additional Note for SuSE 10.1</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<p>Download the appropriate tar file for you system. Untar it. Add the bin
+directory (the one that contains coot and coot-real) to your path and
+you are ready to go...  You should not need to edit or use the
+setup/coot* files
+</p>
+
+
+
+<hr>
+<a name="Coot-on-64_002dbit-RHEL-6"></a>
+<div class="header">
+<p>
+Next: <a href="#Additional-Note-for-SuSE-9_002e1" accesskey="n" rel="next">Additional Note for SuSE 9.1</a>, Up: <a href="#Which-binary-tar-file-shall-I-use_003f" accesskey="u" rel="up">Which binary tar file shall I use?</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="Coot-on-64_002dbit-RHEL-6-1"></a>
+<h4 class="subsection">2.3.1 Coot on 64-bit RHEL 6</h4>
+
+<p>Robert Dagil found that if he used the Coot
+binary-Linux-x86_64-centos-5-python-gtk2, then he could get Coot to
+start if he added the following links to in the <samp>lib</samp> directory
+of the coot binary distro.
+</p>
+<table class="cartouche" border="1"><tr><td>
+<p><tt>ln -s libldap-2.2.so.7 -&gt; /usr/lib64/libldap-2.4.so.2</tt>
+</p>
+<p><tt>ln -s libssl.so.4 -&gt; /usr/lib64/libssl.so.1.0.0</tt>
+</p>
+<p><tt>ln -s libcrypto.so.4 -&gt; /usr/lib64/libcrypto.so.1.0.0</tt>
+</p></td></tr></table>
+
+
+
+
+<hr>
+<a name="Additional-Note-for-SuSE-9_002e1"></a>
+<div class="header">
+<p>
+Next: <a href="#Additional-Note-for-SuSE-9_002e3" accesskey="n" rel="next">Additional Note for SuSE 9.3</a>, Previous: <a href="#Coot-on-64_002dbit-RHEL-6" accesskey="p" rel="previous">Coot on 64-bit RHEL 6</a>, Up: <a href="#Which-binary-tar-file-shall-I-use_003f" accesskey="u" rel="up">Which binary tar file shall I use?</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="Additional-Note-for-SuSE-9_002e1-1"></a>
+<h4 class="subsection">2.3.2 Additional Note for SuSE 9.1</h4>
+
+<p>Michael Latchem reports that coot-0.0.20-binary-Linux-Fedora-Core-1.tar.gz works with 
+   SuSE 9.1 if one makes the following link first:
+</p>
+<table class="cartouche" border="1"><tr><td>
+<p>$ ln -s /usr/lib/libpt_linux_x86_r.so.1.6.5 $COOT_PREFIX/lib/libpt.so.1.5.0
+</p></td></tr></table>
+
+<hr>
+<a name="Additional-Note-for-SuSE-9_002e3"></a>
+<div class="header">
+<p>
+Next: <a href="#Additional-Note-for-SuSE-10_002e1" accesskey="n" rel="next">Additional Note for SuSE 10.1</a>, Previous: <a href="#Additional-Note-for-SuSE-9_002e1" accesskey="p" rel="previous">Additional Note for SuSE 9.1</a>, Up: <a href="#Which-binary-tar-file-shall-I-use_003f" accesskey="u" rel="up">Which binary tar file shall I use?</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="Additional-Note-for-SuSE-9_002e3-1"></a>
+<h4 class="subsection">2.3.3 Additional Note for SuSE 9.3</h4>
+
+<p>Christophe Briand reports that Coot version 0.1 runs on Suse 9.3, using
+the Redhat 8 binary after making the following link
+</p>
+<table class="cartouche" border="1"><tr><td>
+<p><tt>$ ln -s /usr/lib/libImlib2.so.1.1.1 /usr/lib/libImlib.so.11</tt>
+</p></td></tr></table>
+
+<p>I presume that this would also work:
+</p>
+<table class="cartouche" border="1"><tr><td>
+<p><tt>$ ln -s /usr/lib/libImlib2.so.1.1.1 $COOT_PREFIX/lib/libImlib.so.11</tt>
+</p></td></tr></table>
+
+
+<hr>
+<a name="Additional-Note-for-SuSE-10_002e1"></a>
+<div class="header">
+<p>
+Previous: <a href="#Additional-Note-for-SuSE-9_002e3" accesskey="p" rel="previous">Additional Note for SuSE 9.3</a>, Up: <a href="#Which-binary-tar-file-shall-I-use_003f" accesskey="u" rel="up">Which binary tar file shall I use?</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="Additional-Note-for-SuSE-10_002e1-1"></a>
+<h4 class="subsection">2.3.4 Additional Note for SuSE 10.1</h4>
+
+
+<p>You need to install the imlib-1.9.14-215 rpm
+</p>
+<table class="cartouche" border="1"><tr><td>
+<p>ln -s /opt/gnome/lib64/libImlib.so.1.9.14 $COOT_PREFIX/lib/libImlib.so.11
+</p></td></tr></table>
+
+<p>or (depending on your architecture):
+</p>
+<table class="cartouche" border="1"><tr><td>
+<p>ln -s /opt/gnome/lib/libImlib.so.1.9.14 $COOT_PREFIX/lib/libImlib.so.11
+</p></td></tr></table>
+
+
+
+<hr>
+<a name="What-are-the-md5sums_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#I-get-a-libpt-error-when-I-try-to-start-coot-on-Fedora-Core-2" accesskey="n" rel="next">I get a libpt error when I try to start coot on Fedora Core 2</a>, Previous: <a href="#Which-binary-tar-file-shall-I-use_003f" accesskey="p" rel="previous">Which binary tar file shall I use?</a>, Up: <a href="#Building-and-Installing" accesskey="u" rel="up">Building and Installing</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="What-are-the-md5sums_003f-1"></a>
+<h3 class="section">2.4 What are the md5sums?</h3>
+
+<p>The md5sum is a means to determine if the file was corrupted during
+transfer.  Run md5sum on the downloaded tar file and compare the result
+to the md5sum file on the server.  If the results are the same, then the
+tar file is uncorrupted (or more strictly speaking: is corrupted in the
+same way as the file on the server).
+</p>
+<hr>
+<a name="I-get-a-libpt-error-when-I-try-to-start-coot-on-Fedora-Core-2"></a>
+<div class="header">
+<p>
+Next: <a href="#I-get-a-tiff-error-when-I-try-to-start-coot-on-Mac-OS-X" accesskey="n" rel="next">I get a tiff error when I try to start coot on Mac OS X</a>, Previous: <a href="#What-are-the-md5sums_003f" accesskey="p" rel="previous">What are the md5sums?</a>, Up: <a href="#Building-and-Installing" accesskey="u" rel="up">Building and Installing</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="I-get-a-libpt-error-when-I-try-to-start-coot-on-Fedora-Core-2-1"></a>
+<h3 class="section">2.5 I get a libpt error when I try to start coot on Fedora Core 2</h3>
+
+<pre class="verbatim">$ coot
+coot: error while loading shared libraries: libpt.so.1.6.5: cannot
+open shared object file: No such file or directory
+</pre>
+<p>You need to install pwlib:
+</p>
+<p>pwlib-1.6.5-1
+</p>
+<hr>
+<a name="I-get-a-tiff-error-when-I-try-to-start-coot-on-Mac-OS-X"></a>
+<div class="header">
+<p>
+Next: <a href="#I-get-a-jpeg-error-when-I-try-to-start-coot-0_002e1_002e2-on-my-Intel-Mac" accesskey="n" rel="next">I get a jpeg error when I try to start coot 0.1.2 on my Intel Mac</a>, Previous: <a href="#I-get-a-libpt-error-when-I-try-to-start-coot-on-Fedora-Core-2" accesskey="p" rel="previous">I get a libpt error when I try to start coot on Fedora Core 2</a>, Up: <a href="#Building-and-Installing" accesskey="u" rel="up">Building and Installing</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="I-get-a-tiff-error-when-I-try-to-start-coot-on-Mac-OS-X-1"></a>
+<h3 class="section">2.6 I get a tiff error when I try to start coot on Mac OS X</h3>
+
+
+<pre class="verbatim">$ coot
+dyld: coot version mismatch for library: /sw/lib/libtiff.3.dylib (compatibility 
+version of user: 3.6.0 greater than library's version: 3.5.0)
+</pre>
+<p>This is because you have the default fink (stable).  Coot is part of
+unstable fink so you need to enable the unstable branch (see Bill
+Scott&rsquo;s page (above)).
+</p>
+<hr>
+<a name="I-get-a-jpeg-error-when-I-try-to-start-coot-0_002e1_002e2-on-my-Intel-Mac"></a>
+<div class="header">
+<p>
+Next: <a href="#I-get-a-glut-error-when-I-try-to-start-coot-on-Fedora-Core-3" accesskey="n" rel="next">I get a glut error when I try to start coot on Fedora Core 3</a>, Previous: <a href="#I-get-a-tiff-error-when-I-try-to-start-coot-on-Mac-OS-X" accesskey="p" rel="previous">I get a tiff error when I try to start coot on Mac OS X</a>, Up: <a href="#Building-and-Installing" accesskey="u" rel="up">Building and Installing</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="I-get-a-jpeg-error-when-I-try-to-start-coot-0_002e1_002e2-on-my-Intel-Mac-1"></a>
+<h3 class="section">2.7 I get a jpeg error when I try to start coot 0.1.2 on my Intel Mac</h3>
+
+<pre class="verbatim">dyld: Symbol not found: __cg_jpeg_resync_to_restart
+Referenced from: /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ImageIO.framework/Versions/A/ImageIO
+  Expected in: /Users/xxx/coot-0.1.2_bin/lib/libjpeg.62.dylib
+</pre>
+<p>Atsushi Nakagawa says that this can be fixed by
+replacing <tt>xxx/Darwin-chihiro.chem.york.ac.uk-pre-release/lib/libjpeg.dylib</tt> with 
+<tt>/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ImageIO.framework/Versions/A/Resources/libJPEG.dylib</tt>
+</p>
+<p>Or read the advice in $COOT_PREFIX/bin/coot about Intel Mac usage. 
+</p>
+<hr>
+<a name="I-get-a-glut-error-when-I-try-to-start-coot-on-Fedora-Core-3"></a>
+<div class="header">
+<p>
+Next: <a href="#When-I-start-Coot-it-crashes-after-load-_0022hello_002escm_0022" accesskey="n" rel="next">When I start Coot it crashes after <tt>load &quot;hello.scm&quot;</tt></a>, Previous: <a href="#I-get-a-jpeg-error-when-I-try-to-start-coot-0_002e1_002e2-on-my-Intel-Mac" accesskey="p" rel="previous">I get a jpeg error when I try to start coot 0.1.2 on my Intel Mac</a>, Up: <a href="#Building-and-Installing" accesskey="u" rel="up">Building and Installing</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="I-get-a-glut-error-when-I-try-to-start-coot-on-Fedora-Core-3-1"></a>
+<h3 class="section">2.8 I get a glut error when I try to start coot on Fedora Core 3</h3>
+
+<pre class="verbatim">./coot: error while loading shared libraries: libglut.so.3: cannot open shared
+object file: No such file or directory
+</pre>
+<p>You need to install these rpms:
+</p>
+<pre class="verbatim">freeglut-2.2.0-14
+freeglut-devel-2.2.0-14
+</pre>
+<hr>
+<a name="When-I-start-Coot-it-crashes-after-load-_0022hello_002escm_0022"></a>
+<div class="header">
+<p>
+Next: <a href="#How-do-I-compile-coot-and-its-dependencies_003f" accesskey="n" rel="next">How do I compile coot and its dependencies?</a>, Previous: <a href="#I-get-a-glut-error-when-I-try-to-start-coot-on-Fedora-Core-3" accesskey="p" rel="previous">I get a glut error when I try to start coot on Fedora Core 3</a>, Up: <a href="#Building-and-Installing" accesskey="u" rel="up">Building and Installing</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="When-I-start-Coot-it-crashes-after-load-_0022hello_002escm_0022-1"></a>
+<h3 class="section">2.9 When I start Coot it crashes after <tt>load &quot;hello.scm&quot;</tt></h3>
+
+<p>I don&rsquo;t know why it crashes.  To work around, comment out (with a
+semicolon) &quot;hello.scm&quot; in the
+<tt>$COOT_PREFIX/share/coot/scheme/coot.scm</tt> file.
+</p>
+
+<hr>
+<a name="How-do-I-compile-coot-and-its-dependencies_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#How-do-I-report-a-bug_003f" accesskey="n" rel="next">How do I report a bug?</a>, Previous: <a href="#When-I-start-Coot-it-crashes-after-load-_0022hello_002escm_0022" accesskey="p" rel="previous">When I start Coot it crashes after <tt>load &quot;hello.scm&quot;</tt></a>, Up: <a href="#Building-and-Installing" accesskey="u" rel="up">Building and Installing</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="How-do-I-compile-coot-and-its-dependencies_003f-1"></a>
+<h3 class="section">2.10 How do I compile coot and its dependencies?</h3>
+
+<p>It&rsquo;s somewhat involved, but hopefully straightforward if you
+follow the autobuilder:
+</p>
+<p><a href="http://coot.googlecode.com/svn/trunk/build-it-gtk2-simple">http://coot.googlecode.com/svn/trunk/build-it-gtk2-simple</a> 
+</p>
+<p>Coot
+requires mmdb, clipper, glut, gtk, gtkglext.  gtkglext requires GTK+
+and OpenGL.  gtk requires glib. clipper requires fftw, mccp4 and
+mmdb. Optionally you can enhance coot using gtk-canvas, libSSM,
+guile/guile-gtk/guile-gui/guile-www or python (the support for python
+is not so advanced).
+</p>
+<p>These issues are sorted out in the autobuilder.  Just download it,
+change a few parameters to fit your personal system at the top and
+execute it.
+</p>
+<hr>
+<a name="How-do-I-report-a-bug_003f"></a>
+<div class="header">
+<p>
+Previous: <a href="#How-do-I-compile-coot-and-its-dependencies_003f" accesskey="p" rel="previous">How do I compile coot and its dependencies?</a>, Up: <a href="#Building-and-Installing" accesskey="u" rel="up">Building and Installing</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="How-do-I-report-a-bug_003f-1"></a>
+<h3 class="section">2.11 How do I report a bug?</h3>
+
+<p>For general background on what a software developer wants to see (and
+not see) in a bug report:
+</p>
+<p><a href="http://www.chiark.greenend.org.uk/~sgtatham/bugs.html">http://www.chiark.greenend.org.uk/~sgtatham/bugs.html</a>
+</p>
+<p>For the case of Coot, I would also like to know the exact binary you
+are using 
+</p>
+<p><code>coot --version-full</code>
+</p>
+<p>and the operating system on which you are running it.
+</p>
+<p>Also, the last several lines of the console output is often useful.
+</p>
+<hr>
+<a name="Configuration-Problems"></a>
+<div class="header">
+<p>
+Next: <a href="#Using-Coot" accesskey="n" rel="next">Using Coot</a>, Previous: <a href="#Building-and-Installing" accesskey="p" rel="previous">Building and Installing</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="Configuration-Problems-1"></a>
+<h2 class="chapter">3 Configuration Problems</h2>
+
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="#I-get-a-strange-message-when-I-use-coot_002dscheme-files" accesskey="1">I get a strange message when I use coot-scheme files</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#I-get-bizarre-connectivity-and-other-weirdness-on-reading-files" accesskey="2">I get bizarre connectivity and other weirdness on reading files</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#On-my-Mac-the-menu-fonts-are-too-big-_002d-how-can-I-make-them-smaller_003f" accesskey="3">On my Mac the menu fonts are too big - how can I make them smaller?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+
+
+<hr>
+<a name="I-get-a-strange-message-when-I-use-coot_002dscheme-files"></a>
+<div class="header">
+<p>
+Next: <a href="#I-get-bizarre-connectivity-and-other-weirdness-on-reading-files" accesskey="n" rel="next">I get bizarre connectivity and other weirdness on reading files</a>, Up: <a href="#Configuration-Problems" accesskey="u" rel="up">Configuration Problems</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="I-get-a-strange-message-when-I-use-coot_002dscheme-files-1"></a>
+<h3 class="section">3.1 I get a strange message when I use coot-scheme files</h3>
+
+<p>You mean this one?
+</p>
+<pre class="verbatim">load &quot;coot-gui.scm&quot;
+(Error in proc: misc-error  args:  (#f ~A ~S (no code for module (gtk gdk)) #f))
+</pre>
+<p>You need to install guile-gtk.  Here is the source, but your
+distribution may have rpms or debs.
+</p>
+<p><a href="http://www.mirrorservice.org/sites/ftp.gnu.org/gnu/guile-gtk/guile-gtk-0.41.tar.gz">http://www.mirrorservice.org/sites/ftp.gnu.org/gnu/guile-gtk/guile-gtk-0.41.tar.gz</a>
+</p>
+<hr>
+<a name="I-get-bizarre-connectivity-and-other-weirdness-on-reading-files"></a>
+<div class="header">
+<p>
+Next: <a href="#On-my-Mac-the-menu-fonts-are-too-big-_002d-how-can-I-make-them-smaller_003f" accesskey="n" rel="next">On my Mac the menu fonts are too big - how can I make them smaller?</a>, Previous: <a href="#I-get-a-strange-message-when-I-use-coot_002dscheme-files" accesskey="p" rel="previous">I get a strange message when I use coot-scheme files</a>, Up: <a href="#Configuration-Problems" accesskey="u" rel="up">Configuration Problems</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="I-get-bizarre-connectivity-and-other-weirdness-on-reading-files-1"></a>
+<h3 class="section">3.2 I get bizarre connectivity and other weirdness on reading files</h3>
+
+<p>You mean something like this?
+</p>
+<p><a href="http://www.biop.ox.ac.uk/coot/doc/ugly.png">http://www.biop.ox.ac.uk/coot/doc/ugly.png</a>
+</p>
+<p>You have a non-default language. <tt>setenv LANG C</tt> (or <tt>LANG=C</tt> if
+you prefer) before starting coot.  This has recently been added to the
+setup files in the source code (it is not in version 0.0).
+</p>
+
+<p>The problem may also be due to <tt>LC_ALL</tt>.  So, if the above doesn&rsquo;t
+work try also:
+</p>
+<p><tt>$ setenv LC_ALL C</tt>
+</p>
+<hr>
+<a name="On-my-Mac-the-menu-fonts-are-too-big-_002d-how-can-I-make-them-smaller_003f"></a>
+<div class="header">
+<p>
+Previous: <a href="#I-get-bizarre-connectivity-and-other-weirdness-on-reading-files" accesskey="p" rel="previous">I get bizarre connectivity and other weirdness on reading files</a>, Up: <a href="#Configuration-Problems" accesskey="u" rel="up">Configuration Problems</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="On-my-Mac-the-menu-fonts-are-too-big-_002d-how-can-I-make-them-smaller_003f-1"></a>
+<h3 class="section">3.3 On my Mac the menu fonts are too big - how can I make them smaller?</h3>
+
+<p>Edit <samp>/Library/Coot/etc/gtk-2.0/gtkrc</samp> and set 
+</p>
+<p><tt>gtk-font-name = &quot;Sans 9&quot;</tt>
+</p>
+
+
+<hr>
+<a name="Using-Coot"></a>
+<div class="header">
+<p>
+Next: <a href="#Other-Coot-Information" accesskey="n" rel="next">Other Coot Information</a>, Previous: <a href="#Configuration-Problems" accesskey="p" rel="previous">Configuration Problems</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="Using-Coot-1"></a>
+<h2 class="chapter">4 Using Coot</h2>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="#How-does-it-look-when-Coot-starts-properly_003f" accesskey="1">How does it look when Coot starts properly?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#I-get-funny-messages-when-starting-Coot-_002d-should-I-worry_003f" accesskey="2">I get funny messages when starting Coot - should I worry?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#I-get-funny-messages-when-finishing-Coot-_002d-should-I-worry_003f" accesskey="3">I get funny messages when finishing Coot - should I worry?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#On-Fedora-systems-how-do-I-make-the-window-focus-more-useful_003f" accesskey="4">On Fedora systems how do I make the window focus more useful?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#On-Mac-OSX-how-do-I-make-the-window-focus-more-useful_003f" accesskey="5">On Mac OSX how do I make the window focus more useful?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#On-a-Mac-OSX-laptop-how-do-I-work-without-a-mouse_003f" accesskey="6">On a Mac OSX laptop how do I work without a mouse?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-do-I-change-the-contour-level-without-a-scroll_002dwheel-mouse_003f" accesskey="7">How do I change the contour level without a scroll-wheel mouse?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#g_t_0022Unmodelled-Blobs_0022-takes-me-to-space-_002d-why_003f" accesskey="8">&quot;Unmodelled Blobs&quot; takes me to space - why?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Where-has-my-screen-text-_0028or-labels_0029-gone_003f" accesskey="9">Where has my screen text (or labels) gone?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-can-I-speed-up-moving-betwee-residues-using-_0060_0060Space_0027_0027_003f">How can I speed up moving betwee residues using ``Space''?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-do-I-make-the-dialogs-be-in-the-right-place_003f">How do I make the dialogs be in the right place?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Does-it-work-in-hardware-stereo_003f">Does it work in hardware stereo?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Does-Coot-work-in-side_002dby_002dside-stereo-mode_003f">Does Coot work in side-by-side stereo mode?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Does-Coot-work-with-a-Zalman-stereo-monitor_003f">Does Coot work with a Zalman stereo monitor?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-do-you-make-the-antialiasing-work-better_003f">How do you make the antialiasing work better?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#I-have-problems-reading-a-CNS-map-_0028or-mask_0029-into-Coot">I have problems reading a CNS map (or mask) into Coot</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#What-are-the-colours-of-the-difference-map-and-can-I-_0022invert_0022-them_003f">What are the colours of the difference map and can I &quot;invert&quot; them?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-do-I-label-an-atom_003f">How do I label an atom?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#I-don_0027t-like-your-default-REFMAC-parameters_002e-How-do-I-change-them_003f">I don't like your default REFMAC parameters. How do I change them?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-do-I-put-a-pointer-into-a-blob-of-density_003f">How do I put a pointer into a blob of density?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-do-I-_0022grab_0022-just-one-atom-in-Real-Space-Refinement_002fRegularization_003f">How do I &quot;grab&quot; just one atom in Real Space Refinement/Regularization?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#My-sidechains-are-being-sucked-into-the-density-for-metal-_002d-how-do-I-stop-that_003f">My sidechains are being sucked into the density for metal - how do I stop that?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#My-Density-Fit-Graph-bars-are-all-red-_002d-how-do-I-fix-that_003f">My Density Fit Graph bars are all red - how do I fix that?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-do-I-bind-a-function-to-a-key_003f">How do I bind a function to a key?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-do-I-force-Coot-to-clean-up-all-the-time_003f">How do I force Coot to clean up all the time?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#I-can_0027t-mutate-my-broken-residue">I can't mutate my broken residue</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-do-I-read-a-coordinates-file-with-duplicate-residue-numbers_003f">How do I read a coordinates file with duplicate residue numbers?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Can-I-make-the-spin-mode-rotate-slower_003f">Can I make the spin mode rotate slower?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Does-Coot-use-CONNECT-records_003f">Does Coot use CONNECT records?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Does-Coot-use-LINK-records_003f">Does Coot use LINK records?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-do-I-read-many-PDB-files-on-the-command-line_003f">How do I read many PDB files on the command line?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-do-I-setup-auto_002dcompletion-of-command-line-options_003f">How do I setup auto-completion of command line options?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-do-2-people-use-Coot-with-the-same-structure_003f">How do 2 people use Coot with the same structure?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-do-I-find-CIS_002dpeptides-in-my-structure_003f">How do I find CIS-peptides in my structure?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-do-I-do-a-superposition-on-just-a-part-of-my-structure_003f">How do I do a superposition on just a part of my structure?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr>
+<a name="How-does-it-look-when-Coot-starts-properly_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#I-get-funny-messages-when-starting-Coot-_002d-should-I-worry_003f" accesskey="n" rel="next">I get funny messages when starting Coot - should I worry?</a>, Up: <a href="#Using-Coot" accesskey="u" rel="up">Using Coot</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="How-does-it-look-when-Coot-starts-properly_003f-1"></a>
+<h3 class="section">4.1 How does it look when Coot starts properly?</h3>
+
+<p>Like this:
+</p>
+<p><a href="http://www.ysbl.york.ac.uk/%7Eemsley/coot/coot-startup.log">http://www.ysbl.york.ac.uk/%7Eemsley/coot/coot-startup.log</a>
+</p>
+
+<p>Things to look out for: Error reading all scm files, error reading
+Refmac dictionary files, error reading colours.def, error reading
+syminfo.lib, error finding splash-screen image, error reading cootrc
+file, error finding reference structures (e.g. from COOT_REF_STUCTS).
+So, if you get error messages or warning when coot start, you can
+expect it to be other than fully functional.
+</p>
+<hr>
+<a name="I-get-funny-messages-when-starting-Coot-_002d-should-I-worry_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#I-get-funny-messages-when-finishing-Coot-_002d-should-I-worry_003f" accesskey="n" rel="next">I get funny messages when finishing Coot - should I worry?</a>, Previous: <a href="#How-does-it-look-when-Coot-starts-properly_003f" accesskey="p" rel="previous">How does it look when Coot starts properly?</a>, Up: <a href="#Using-Coot" accesskey="u" rel="up">Using Coot</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="I-get-funny-messages-when-starting-Coot-_002d-should-I-worry_003f-1"></a>
+<h3 class="section">4.2 I get funny messages when starting Coot - should I worry?</h3>
+
+<p>e.g. 
+</p>
+<p><tt>Gtk-WARNING **: Unable to locate loadable module in module_path:
+&quot;libbluecurve.so&quot;</tt>
+</p>
+<p>No, don&rsquo;t worry - Gtk just can&rsquo;t find a theme.  Things will look
+a bit different to how they otherwise might, but everything will still
+work.
+</p>
+
+<hr>
+<a name="I-get-funny-messages-when-finishing-Coot-_002d-should-I-worry_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#On-Fedora-systems-how-do-I-make-the-window-focus-more-useful_003f" accesskey="n" rel="next">On Fedora systems how do I make the window focus more useful?</a>, Previous: <a href="#I-get-funny-messages-when-starting-Coot-_002d-should-I-worry_003f" accesskey="p" rel="previous">I get funny messages when starting Coot - should I worry?</a>, Up: <a href="#Using-Coot" accesskey="u" rel="up">Using Coot</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="I-get-funny-messages-when-finishing-Coot-_002d-should-I-worry_003f-1"></a>
+<h3 class="section">4.3 I get funny messages when finishing Coot - should I worry?</h3>
+
+<p>These messages:
+</p>
+<pre class="verbatim">Some deprecated features have been used.  Set the environment
+variable GUILE_WARN_DEPRECATED to &quot;detailed&quot; and rerun the
+program to get more information.  Set it to &quot;no&quot; to suppress
+this message.
+
+ObjectCache: Leaked 0002 refs to P 2ac 2ab
+ObjectCache: Leaked 0002 refs to P 2ac 2ab Nuvw = ( 108, 132,  64)}
+
+are nothing to worry about.  I will clean them up one day (for release
+0.7, I hope).
+</pre>
+<hr>
+<a name="On-Fedora-systems-how-do-I-make-the-window-focus-more-useful_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#On-Mac-OSX-how-do-I-make-the-window-focus-more-useful_003f" accesskey="n" rel="next">On Mac OSX how do I make the window focus more useful?</a>, Previous: <a href="#I-get-funny-messages-when-finishing-Coot-_002d-should-I-worry_003f" accesskey="p" rel="previous">I get funny messages when finishing Coot - should I worry?</a>, Up: <a href="#Using-Coot" accesskey="u" rel="up">Using Coot</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="On-Fedora-systems-how-do-I-make-the-window-focus-more-useful_003f-1"></a>
+<h3 class="section">4.4 On Fedora systems how do I make the window focus more useful?</h3>
+
+<p>The default window focusing (using Metacity I believe) is a PITA when
+using Coot. Try this:
+</p>
+<p><code>Hat -&gt; Preferences -&gt; Windows -&gt; Select windows when the mouse moves
+over them</code>: check that box.
+</p>
+<p><code>Hat --&gt; Preferences -&gt; Windows -&gt; To move a window, press and hold
+this key then grab the window</code>:
+</p>
+<p>Change from 
+</p>
+<p>Control
+</p>
+<p>to Alt or Super
+</p>
+<hr>
+<a name="On-Mac-OSX-how-do-I-make-the-window-focus-more-useful_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#On-a-Mac-OSX-laptop-how-do-I-work-without-a-mouse_003f" accesskey="n" rel="next">On a Mac OSX laptop how do I work without a mouse?</a>, Previous: <a href="#On-Fedora-systems-how-do-I-make-the-window-focus-more-useful_003f" accesskey="p" rel="previous">On Fedora systems how do I make the window focus more useful?</a>, Up: <a href="#Using-Coot" accesskey="u" rel="up">Using Coot</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="On-Mac-OSX-how-do-I-make-the-window-focus-more-useful_003f-1"></a>
+<h3 class="section">4.5 On Mac OSX how do I make the window focus more useful?</h3>
+
+<p>The default window focusing with the Aqua window manager is a PITA
+when using Coot. Try typing in a terminal this to set &quot;Focus Follows
+Mouse&quot;:
+</p>
+<p><code>$ defaults write com.apple.x11 wm_ffm true</code>
+</p>
+<p>On a more modern version of Mac OS X (10.5+), that might be:
+</p>
+<p><code>$ defaults write org.x.X11 wm_ffm true</code>
+</p>
+<p>(thanks to William Scott for pointing that out).
+</p>
+<p>You might need to restart X11 to activate this setting.
+</p>
+<hr>
+<a name="On-a-Mac-OSX-laptop-how-do-I-work-without-a-mouse_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#How-do-I-change-the-contour-level-without-a-scroll_002dwheel-mouse_003f" accesskey="n" rel="next">How do I change the contour level without a scroll-wheel mouse?</a>, Previous: <a href="#On-Mac-OSX-how-do-I-make-the-window-focus-more-useful_003f" accesskey="p" rel="previous">On Mac OSX how do I make the window focus more useful?</a>, Up: <a href="#Using-Coot" accesskey="u" rel="up">Using Coot</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="On-a-Mac-OSX-laptop-how-do-I-work-without-a-mouse_003f-1"></a>
+<h3 class="section">4.6 On a Mac OSX laptop how do I work without a mouse?</h3>
+
+<p>You can use this setting: 
+</p>
+<p>X11 -&gt; Preferences -&gt; Emulate 3 Button mouse
+</p>
+<p>It will simulate the pressing of middle and right mouse when you use
+it in conjunction with Option and Apple keys.
+</p>
+<hr>
+<a name="How-do-I-change-the-contour-level-without-a-scroll_002dwheel-mouse_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#g_t_0022Unmodelled-Blobs_0022-takes-me-to-space-_002d-why_003f" accesskey="n" rel="next">&quot;Unmodelled Blobs&quot; takes me to space - why?</a>, Previous: <a href="#On-a-Mac-OSX-laptop-how-do-I-work-without-a-mouse_003f" accesskey="p" rel="previous">On a Mac OSX laptop how do I work without a mouse?</a>, Up: <a href="#Using-Coot" accesskey="u" rel="up">Using Coot</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="How-do-I-change-the-contour-level-without-a-scroll_002dwheel-mouse_003f-1"></a>
+<h3 class="section">4.7 How do I change the contour level without a scroll-wheel mouse?</h3>
+
+<p>Keyboard + and -.
+</p>
+<hr>
+<a name="g_t_0022Unmodelled-Blobs_0022-takes-me-to-space-_002d-why_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#Where-has-my-screen-text-_0028or-labels_0029-gone_003f" accesskey="n" rel="next">Where has my screen text (or labels) gone?</a>, Previous: <a href="#How-do-I-change-the-contour-level-without-a-scroll_002dwheel-mouse_003f" accesskey="p" rel="previous">How do I change the contour level without a scroll-wheel mouse?</a>, Up: <a href="#Using-Coot" accesskey="u" rel="up">Using Coot</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="g_t_0022Unmodelled-Blobs_0022-takes-me-to-space-_002d-why_003f-1"></a>
+<h3 class="section">4.8 &quot;Unmodelled Blobs&quot; takes me to space - why?</h3>
+
+<p>One problem could be that the symmetry and cell of the map does 
+not match the symmetry and cell of the related protein.
+</p>
+<p>Or perhaps it&rsquo;s because Coot does not use the &quot;viewing&quot; contour level 
+to generate blob map point clusters, i.e. it could be using a contour 
+level much below what you are looking at.  Coot positions the view at 
+the centre of a blob. If the blob consists of an &quot;arc&quot; of points (as 
+is often the case) the centre of the blob will not be <em>in</em> the blob.
+</p>
+
+<hr>
+<a name="Where-has-my-screen-text-_0028or-labels_0029-gone_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#How-can-I-speed-up-moving-betwee-residues-using-_0060_0060Space_0027_0027_003f" accesskey="n" rel="next">How can I speed up moving betwee residues using ``Space''?</a>, Previous: <a href="#g_t_0022Unmodelled-Blobs_0022-takes-me-to-space-_002d-why_003f" accesskey="p" rel="previous">&quot;Unmodelled Blobs&quot; takes me to space - why?</a>, Up: <a href="#Using-Coot" accesskey="u" rel="up">Using Coot</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="Where-has-my-screen-text-_0028or-labels_0029-gone_003f-1"></a>
+<h3 class="section">4.9 Where has my screen text (or labels) gone?</h3>
+
+<p>&quot;I can&rsquo;t see the contour level at the top of the screen or and the
+atom labels are faint or non-existant.&quot;
+</p>
+<p>This seems like a graphics driver bug, or a hardware problem.  If you
+turn the screenbackground white you might be able to see the text.
+</p>
+<p>If you bring the atom to the centre of the screen, the atom label
+becomes more readable.
+</p>
+<hr>
+<a name="How-can-I-speed-up-moving-betwee-residues-using-_0060_0060Space_0027_0027_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#How-do-I-make-the-dialogs-be-in-the-right-place_003f" accesskey="n" rel="next">How do I make the dialogs be in the right place?</a>, Previous: <a href="#Where-has-my-screen-text-_0028or-labels_0029-gone_003f" accesskey="p" rel="previous">Where has my screen text (or labels) gone?</a>, Up: <a href="#Using-Coot" accesskey="u" rel="up">Using Coot</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="How-can-I-speed-up-moving-betwee-residues-using-_0060_0060Space_0027_0027_003f-1"></a>
+<h3 class="section">4.10 How can I speed up moving betwee residues using &ldquo;Space&rdquo;?</h3>
+
+<p><code>Edit -&gt; Preferences -&gt; Smooth Recentering -&gt; Number of Steps -&gt; 10</code>
+</p>
+
+<hr>
+<a name="How-do-I-make-the-dialogs-be-in-the-right-place_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#Does-it-work-in-hardware-stereo_003f" accesskey="n" rel="next">Does it work in hardware stereo?</a>, Previous: <a href="#How-can-I-speed-up-moving-betwee-residues-using-_0060_0060Space_0027_0027_003f" accesskey="p" rel="previous">How can I speed up moving betwee residues using ``Space''?</a>, Up: <a href="#Using-Coot" accesskey="u" rel="up">Using Coot</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="How-do-I-make-the-dialogs-be-in-the-right-place_003f-1"></a>
+<h3 class="section">4.11 How do I make the dialogs be in the right place?</h3>
+
+<p>&quot;I&rsquo;m bored of moving the dialogs around every coot session.  How
+  do I make coot know where I want them? 
+</p>
+<p>You can use the <code>&quot;Position Dialogs&quot;</code> function in the <code>Extensions -&gt;
+Settings</code> menu.
+</p>
+<p>For a more manual way, try
+</p>
+<p><a href="http://www.ysbl.york.ac.uk/%7Eemsley/coot/position-dialogs.txt">http://www.ysbl.york.ac.uk/%7Eemsley/coot/position-dialogs.txt</a>.
+</p>
+<hr>
+<a name="Does-it-work-in-hardware-stereo_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#Does-Coot-work-in-side_002dby_002dside-stereo-mode_003f" accesskey="n" rel="next">Does Coot work in side-by-side stereo mode?</a>, Previous: <a href="#How-do-I-make-the-dialogs-be-in-the-right-place_003f" accesskey="p" rel="previous">How do I make the dialogs be in the right place?</a>, Up: <a href="#Using-Coot" accesskey="u" rel="up">Using Coot</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="Does-it-work-in-hardware-stereo_003f-1"></a>
+<h3 class="section">4.12 Does it work in hardware stereo?</h3>
+
+<p>It works in quad buffered stereo mode (&quot;stereo-in-a-window&quot;). You will
+need a recent version and either use the <code>Draw -&gt; Stereo</code> dialog
+or pass the argument <code>--stereo</code>.
+</p>
+<hr>
+<a name="Does-Coot-work-in-side_002dby_002dside-stereo-mode_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#Does-Coot-work-with-a-Zalman-stereo-monitor_003f" accesskey="n" rel="next">Does Coot work with a Zalman stereo monitor?</a>, Previous: <a href="#Does-it-work-in-hardware-stereo_003f" accesskey="p" rel="previous">Does it work in hardware stereo?</a>, Up: <a href="#Using-Coot" accesskey="u" rel="up">Using Coot</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="Does-Coot-work-in-side_002dby_002dside-stereo-mode_003f-1"></a>
+<h3 class="section">4.13 Does Coot work in side-by-side stereo mode?</h3>
+
+<p>Yes.
+</p>
+<hr>
+<a name="Does-Coot-work-with-a-Zalman-stereo-monitor_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#How-do-you-make-the-antialiasing-work-better_003f" accesskey="n" rel="next">How do you make the antialiasing work better?</a>, Previous: <a href="#Does-Coot-work-in-side_002dby_002dside-stereo-mode_003f" accesskey="p" rel="previous">Does Coot work in side-by-side stereo mode?</a>, Up: <a href="#Using-Coot" accesskey="u" rel="up">Using Coot</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="Does-Coot-work-with-a-Zalman-stereo-monitor_003f-1"></a>
+<h3 class="section">4.14 Does Coot work with a Zalman stereo monitor?</h3>
+
+<p>Yes.  Remember to use the DVI cable (not VGA) [thanks Allen Sickmier].
+</p>
+<blockquote>
+<p><b>Warren DeLano:</b> A line width of 2 pixels wide or greater is essential for achieving
+   a good stereo effort with electron density meshes, &quot;wire&quot; bonds, etc.
+</p></blockquote>
+
+<p>You can achieve this in Coot using:
+</p>
+<p><code>(set-map-line-width 2)</code>
+</p>
+<p>You might like also to turn on antialiasing (see below).
+</p>
+
+<hr>
+<a name="How-do-you-make-the-antialiasing-work-better_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#I-have-problems-reading-a-CNS-map-_0028or-mask_0029-into-Coot" accesskey="n" rel="next">I have problems reading a CNS map (or mask) into Coot</a>, Previous: <a href="#Does-Coot-work-with-a-Zalman-stereo-monitor_003f" accesskey="p" rel="previous">Does Coot work with a Zalman stereo monitor?</a>, Up: <a href="#Using-Coot" accesskey="u" rel="up">Using Coot</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="How-do-you-make-the-antialiasing-work-better_003f-1"></a>
+<h3 class="section">4.15 How do you make the antialiasing work better?</h3>
+
+<p>The build-in antialiasing in Coot is not very good - it needs to be
+improved. 
+</p>
+<p>If you have an nvidia card, you can turn on antialiasing using the
+environment variable <tt>__GL_FSAA_MODE</tt>.  I set it to 5 for my
+graphics card, the best setting (in the range 1-20 or so) depends on
+your hardware.
+</p>
+<p>Alternatively, use  <tt>nvidia-settings</tt>
+</p>
+<p><code>Antialiasing Settings -&gt; Override Application Setting,  16x Antialiasing</code>  (on the slider)
+</p>
+<p>Then restart coot.
+</p>
+<hr>
+<a name="I-have-problems-reading-a-CNS-map-_0028or-mask_0029-into-Coot"></a>
+<div class="header">
+<p>
+Next: <a href="#What-are-the-colours-of-the-difference-map-and-can-I-_0022invert_0022-them_003f" accesskey="n" rel="next">What are the colours of the difference map and can I &quot;invert&quot; them?</a>, Previous: <a href="#How-do-you-make-the-antialiasing-work-better_003f" accesskey="p" rel="previous">How do you make the antialiasing work better?</a>, Up: <a href="#Using-Coot" accesskey="u" rel="up">Using Coot</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="I-have-problems-reading-a-CNS-map-_0028or-mask_0029-into-Coot-1"></a>
+<h3 class="section">4.16 I have problems reading a CNS map (or mask) into Coot</h3>
+
+<ol>
+<li> Don&rsquo;t do it.  Use CNS data instead and let Coot take care of
+the map generation.
+
+</li><li> 
+<blockquote>
+
+<p><b>Kevin Cowtan::</b> Change the setting in CNS which controls the extent of the output
+map. Instead of outputting a map covering a single molecule, you need
+to output a map covering a whole asymmetric unit (or if you prefer a
+whole unit cell).
+</p>
+<p>The X-PLOR maps output by CNS are output in O mode, not Coot mode,
+by default. This is due to a fundamental difference in understanding
+what a map is between programs which work crystal space (e.g. Coot,
+Quanta, XtalView) and those which don&rsquo;t.
+</p></blockquote>
+
+</li></ol>
+
+<hr>
+<a name="What-are-the-colours-of-the-difference-map-and-can-I-_0022invert_0022-them_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#How-do-I-label-an-atom_003f" accesskey="n" rel="next">How do I label an atom?</a>, Previous: <a href="#I-have-problems-reading-a-CNS-map-_0028or-mask_0029-into-Coot" accesskey="p" rel="previous">I have problems reading a CNS map (or mask) into Coot</a>, Up: <a href="#Using-Coot" accesskey="u" rel="up">Using Coot</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="What-are-the-colours-of-the-difference-map-and-can-I-_0022invert_0022-them_003f-1"></a>
+<h3 class="section">4.17 What are the colours of the difference map and can I &quot;invert&quot; them?</h3>
+
+<p>Green is positive
+</p>
+<p>Red is negative
+</p>
+<p>To change the colour scheme (other than simply changing the map colour
+wheel):
+</p>
+<p><code>(set-swap-difference-map-colours 1)</code>
+</p>
+
+
+<hr>
+<a name="How-do-I-label-an-atom_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#I-don_0027t-like-your-default-REFMAC-parameters_002e-How-do-I-change-them_003f" accesskey="n" rel="next">I don't like your default REFMAC parameters. How do I change them?</a>, Previous: <a href="#What-are-the-colours-of-the-difference-map-and-can-I-_0022invert_0022-them_003f" accesskey="p" rel="previous">What are the colours of the difference map and can I &quot;invert&quot; them?</a>, Up: <a href="#Using-Coot" accesskey="u" rel="up">Using Coot</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="How-do-I-label-an-atom_003f-1"></a>
+<h3 class="section">4.18 How do I label an atom?</h3>
+
+<ul>
+<li> Double-click on it
+</li><li> Shift-click on it
+</li><li> Press &quot;L&quot; labels atom closest to the centre of the screen.
+</li></ul>
+
+<hr>
+<a name="I-don_0027t-like-your-default-REFMAC-parameters_002e-How-do-I-change-them_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#How-do-I-put-a-pointer-into-a-blob-of-density_003f" accesskey="n" rel="next">How do I put a pointer into a blob of density?</a>, Previous: <a href="#How-do-I-label-an-atom_003f" accesskey="p" rel="previous">How do I label an atom?</a>, Up: <a href="#Using-Coot" accesskey="u" rel="up">Using Coot</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="I-don_0027t-like-your-default-REFMAC-parameters_002e-How-do-I-change-them_003f-1"></a>
+<h3 class="section">4.19 I don&rsquo;t like your default REFMAC parameters. How do I change them?</h3>
+
+<p>There are 2 ways.  Either create a file called refmac-extra params in
+the directory in which you started coot, e.g.
+&quot;http://www.ysbl.york.ac.uk/%7Eemsley/coot/refmac-extra-params&quot;
+</p>
+<p>or
+</p>
+<p>define (for example in you <tt>$HOME/.coot</tt> file) the variable
+<code>refmac-extra-params</code>, <em>e.g.</em> 
+</p>
+<p><code>
+(define refmac-extra-params 
+   (list &quot;WEIGHT 0.1&quot;
+         &quot;SOLVENT NO&quot;
+         &quot;REFI BREF ISOT&quot;
+         &quot;NCYCLES 6&quot;))
+</code>
+</p>
+<hr>
+<a name="How-do-I-put-a-pointer-into-a-blob-of-density_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#How-do-I-_0022grab_0022-just-one-atom-in-Real-Space-Refinement_002fRegularization_003f" accesskey="n" rel="next">How do I &quot;grab&quot; just one atom in Real Space Refinement/Regularization?</a>, Previous: <a href="#I-don_0027t-like-your-default-REFMAC-parameters_002e-How-do-I-change-them_003f" accesskey="p" rel="previous">I don't like your default REFMAC parameters. How do I change them?</a>, Up: <a href="#Using-Coot" accesskey="u" rel="up">Using Coot</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="How-do-I-put-a-pointer-into-a-blob-of-density_003f-1"></a>
+<h3 class="section">4.20 How do I put a pointer into a blob of density?</h3>
+
+
+<ul>
+<li> Method 1: Quite straightforwardly drag the density onto the pointer (centre of the screen) 
+      using Ctrl Left-mouse drag.
+
+</li><li> Method 2: bind the function (blob-under-pointer-to-screen-centre) to a key. Press that key. 
+</li></ul>
+
+<p>(You can then use Measures -&gt; Pointer Distances if you wish.)
+</p>
+<hr>
+<a name="How-do-I-_0022grab_0022-just-one-atom-in-Real-Space-Refinement_002fRegularization_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#My-sidechains-are-being-sucked-into-the-density-for-metal-_002d-how-do-I-stop-that_003f" accesskey="n" rel="next">My sidechains are being sucked into the density for metal - how do I stop that?</a>, Previous: <a href="#How-do-I-put-a-pointer-into-a-blob-of-density_003f" accesskey="p" rel="previous">How do I put a pointer into a blob of density?</a>, Up: <a href="#Using-Coot" accesskey="u" rel="up">Using Coot</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="How-do-I-_0022grab_0022-just-one-atom-in-Real-Space-Refinement_002fRegularization_003f-1"></a>
+<h3 class="section">4.21 How do I &quot;grab&quot; just one atom in Real Space Refinement/Regularization?</h3>
+
+<p>Cntl Left-mouse-click over an intermediate (white) atom. Drag and
+drop. Make sure that you have focus in the graphics window when you
+press Ctrl (which, in Windows, that the graphics window has a blue
+title bar rather than a grey one). (You need to be precise with
+the clicking - if the view rotates instead of the atom moving then you
+know that you have been insufficiently precise.)
+</p>
+
+<p>If you don&rsquo;t want regularization/refinement, use the Rotate/Translate
+tool and Ctrl-click the atom(s) to move them one at a time.
+</p>
+<p>If you want &quot;on the fly&quot; regularization/refinement of fragments that
+include atoms that don&rsquo;t move when you &quot;drop&quot; them you need to fix
+them with the Fix Atom tool before regularization/refinement.
+</p>
+
+<hr>
+<a name="My-sidechains-are-being-sucked-into-the-density-for-metal-_002d-how-do-I-stop-that_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#My-Density-Fit-Graph-bars-are-all-red-_002d-how-do-I-fix-that_003f" accesskey="n" rel="next">My Density Fit Graph bars are all red - how do I fix that?</a>, Previous: <a href="#How-do-I-_0022grab_0022-just-one-atom-in-Real-Space-Refinement_002fRegularization_003f" accesskey="p" rel="previous">How do I &quot;grab&quot; just one atom in Real Space Refinement/Regularization?</a>, Up: <a href="#Using-Coot" accesskey="u" rel="up">Using Coot</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="My-sidechains-are-being-sucked-into-the-density-for-metal-_002d-how-do-I-stop-that_003f-1"></a>
+<h3 class="section">4.22 My sidechains are being sucked into the density for metal - how do I stop that?</h3>
+
+<p>The best way to fix that is to add proper (bonding) restraints between
+the metal and the sidechain (type).
+</p>
+<p>If those are not available, you can mask out the density of the metals.
+</p>
+<p><code>Extensions -&gt; Maps -&gt; Mask Map by Atom Selection...</code>
+</p>
+<p>For example, atom selection of <code>&quot;//B/[CO]&quot;</code> will remove all the
+density for Cobalts in the &quot;B&quot; chain.
+</p>
+<p>Then you will need to set the masked map as the map to be used for
+refinement, of course.
+</p>
+<hr>
+<a name="My-Density-Fit-Graph-bars-are-all-red-_002d-how-do-I-fix-that_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#How-do-I-bind-a-function-to-a-key_003f" accesskey="n" rel="next">How do I bind a function to a key?</a>, Previous: <a href="#My-sidechains-are-being-sucked-into-the-density-for-metal-_002d-how-do-I-stop-that_003f" accesskey="p" rel="previous">My sidechains are being sucked into the density for metal - how do I stop that?</a>, Up: <a href="#Using-Coot" accesskey="u" rel="up">Using Coot</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="My-Density-Fit-Graph-bars-are-all-red-_002d-how-do-I-fix-that_003f-1"></a>
+<h3 class="section">4.23 My Density Fit Graph bars are all red - how do I fix that?</h3>
+
+<p>The bar heights are set to be sensible for average resolution data on
+the absolute scale.  If that is not the case for your data then you
+may well see red bars.
+</p>
+<p>You can change the scale:
+</p>
+<p><code>Extensions -&gt; Refine&hellip; -&gt; Set  Density Fit Graph Weight&hellip;</code>
+</p>
+
+
+<hr>
+<a name="How-do-I-bind-a-function-to-a-key_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#How-do-I-force-Coot-to-clean-up-all-the-time_003f" accesskey="n" rel="next">How do I force Coot to clean up all the time?</a>, Previous: <a href="#My-Density-Fit-Graph-bars-are-all-red-_002d-how-do-I-fix-that_003f" accesskey="p" rel="previous">My Density Fit Graph bars are all red - how do I fix that?</a>, Up: <a href="#Using-Coot" accesskey="u" rel="up">Using Coot</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="How-do-I-bind-a-function-to-a-key_003f-1"></a>
+<h3 class="section">4.24 How do I bind a function to a key?</h3>
+
+<p>Like this:
+</p>
+
+<pre class="verbatim">;; Bind a function to the &quot;v&quot; key (Shift-V would be bound to &quot;V&quot;).
+(add-key-binding &quot;Place atom at pointer&quot; &quot;v&quot; 
+   (lambda ()
+      (set-pointer-atom-is-dummy 1)
+      (place-atom-at-pointer)))
+</pre>
+
+
+<hr>
+<a name="How-do-I-force-Coot-to-clean-up-all-the-time_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#I-can_0027t-mutate-my-broken-residue" accesskey="n" rel="next">I can't mutate my broken residue</a>, Previous: <a href="#How-do-I-bind-a-function-to-a-key_003f" accesskey="p" rel="previous">How do I bind a function to a key?</a>, Up: <a href="#Using-Coot" accesskey="u" rel="up">Using Coot</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="How-do-I-force-Coot-to-clean-up-all-the-time_003f-1"></a>
+<h3 class="section">4.25 How do I force Coot to clean up all the time?</h3>
+
+<p>By default, Coot cleans out the <samp>coot-backup</samp> directory files
+older than 7 days every 7 days.  If you want Coot to clean up all
+backup files every time it exits, add this to your <samp>~/.coot</samp>
+file.
+</p>
+
+<p><code>(define clear-backups-maybe (lambda () (delete-coot-backup-files
+        'delete) #f))</code>
+</p>
+
+
+<hr>
+<a name="I-can_0027t-mutate-my-broken-residue"></a>
+<div class="header">
+<p>
+Next: <a href="#How-do-I-read-a-coordinates-file-with-duplicate-residue-numbers_003f" accesskey="n" rel="next">How do I read a coordinates file with duplicate residue numbers?</a>, Previous: <a href="#How-do-I-force-Coot-to-clean-up-all-the-time_003f" accesskey="p" rel="previous">How do I force Coot to clean up all the time?</a>, Up: <a href="#Using-Coot" accesskey="u" rel="up">Using Coot</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="I-can_0027t-mutate-my-broken-residue-1"></a>
+<h3 class="section">4.26 I can&rsquo;t mutate my broken residue</h3>
+
+<blockquote>
+<p><b>Question:</b> I have a residue that has one or more missing mainchain atoms.  I
+want to mutate a &quot;fresh&quot; residue in - but I can&rsquo;t. What should I do?
+</p></blockquote>
+
+<blockquote>
+<p><b>Answer:</b> If any of the CA, C or N atoms of a residue are missing then mutate
+can&rsquo;t work (it needs these atoms to do the least-squares fit).  This
+is what I do in such a case: first delete the residue, then add a new
+one with &quot;Add Terminal Residue...&quot; then &quot;Mutate -&gt; Auto Fit...&quot; to the
+required type, then Refine Zone.
+</p></blockquote>
+
+<hr>
+<a name="How-do-I-read-a-coordinates-file-with-duplicate-residue-numbers_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#Can-I-make-the-spin-mode-rotate-slower_003f" accesskey="n" rel="next">Can I make the spin mode rotate slower?</a>, Previous: <a href="#I-can_0027t-mutate-my-broken-residue" accesskey="p" rel="previous">I can't mutate my broken residue</a>, Up: <a href="#Using-Coot" accesskey="u" rel="up">Using Coot</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="How-do-I-read-a-coordinates-file-with-duplicate-residue-numbers_003f-1"></a>
+<h3 class="section">4.27 How do I read a coordinates file with duplicate residue numbers?</h3>
+
+<blockquote>
+
+<p><b>Question:</b> Coot says this when I try to read 2vqr.pdb:
+</p>
+<pre class="verbatim">INFO:: Reading coordinate file:2vqr.pdb
+WARNING:: Error reading small-molecule cif &quot;2vqr.pdb&quot;
+There was an error reading 2vqr.pdb.
+ERROR 42 READ: Duplicate sequence number and insertion code.
+         LINE #1119
+     ATOM    445  N  BCYS A  57      35.391  28.095  68.681  0.40 16.84           N
+
+</pre><p>This is a file from PDB (2vqr) and should be correct in format.
+</p>
+</blockquote>
+
+<blockquote>
+
+<p><b>Answer:</b> Add this to your <samp>$HOME/.coot-preferences/startup.py</samp> file:
+</p>
+<p><code>allow_duplicate_sequence_numbers()</code>
+</p>
+<p>This is not the default because it makes coot crash elsewhere (or maybe it only used to
+and it&rsquo;s fixed now - not sure).
+</p>
+</blockquote>
+
+
+
+<hr>
+<a name="Can-I-make-the-spin-mode-rotate-slower_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#Does-Coot-use-CONNECT-records_003f" accesskey="n" rel="next">Does Coot use CONNECT records?</a>, Previous: <a href="#How-do-I-read-a-coordinates-file-with-duplicate-residue-numbers_003f" accesskey="p" rel="previous">How do I read a coordinates file with duplicate residue numbers?</a>, Up: <a href="#Using-Coot" accesskey="u" rel="up">Using Coot</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="Can-I-make-the-spin-mode-rotate-slower_003f-1"></a>
+<h3 class="section">4.28 Can I make the spin mode rotate slower?</h3>
+
+<p>Yes, <code>Extensions -&gt; Settings -&gt; Set Spin Speed</code>.
+</p>
+<hr>
+<a name="Does-Coot-use-CONNECT-records_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#Does-Coot-use-LINK-records_003f" accesskey="n" rel="next">Does Coot use LINK records?</a>, Previous: <a href="#Can-I-make-the-spin-mode-rotate-slower_003f" accesskey="p" rel="previous">Can I make the spin mode rotate slower?</a>, Up: <a href="#Using-Coot" accesskey="u" rel="up">Using Coot</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="Does-Coot-use-CONNECT-records_003f-1"></a>
+<h3 class="section">4.29 Does Coot use CONNECT records?</h3>
+
+<p>No. 
+</p>
+<hr>
+<a name="Does-Coot-use-LINK-records_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#How-do-I-read-many-PDB-files-on-the-command-line_003f" accesskey="n" rel="next">How do I read many PDB files on the command line?</a>, Previous: <a href="#Does-Coot-use-CONNECT-records_003f" accesskey="p" rel="previous">Does Coot use CONNECT records?</a>, Up: <a href="#Using-Coot" accesskey="u" rel="up">Using Coot</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="Does-Coot-use-LINK-records_003f-1"></a>
+<h3 class="section">4.30 Does Coot use LINK records?</h3>
+
+<p>Yes. 
+</p>
+
+<hr>
+<a name="How-do-I-read-many-PDB-files-on-the-command-line_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#How-do-I-setup-auto_002dcompletion-of-command-line-options_003f" accesskey="n" rel="next">How do I setup auto-completion of command line options?</a>, Previous: <a href="#Does-Coot-use-LINK-records_003f" accesskey="p" rel="previous">Does Coot use LINK records?</a>, Up: <a href="#Using-Coot" accesskey="u" rel="up">Using Coot</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="How-do-I-read-many-PDB-files-on-the-command-line_003f-1"></a>
+<h3 class="section">4.31 How do I read many PDB files on the command line?</h3>
+
+<p><tt>$ coot --pdb pdb-1.pdb --pdb pdb-2.pdb --pdb pdb-3.pdb *.pdb</tt> <em>etc.</em>
+</p>
+<hr>
+<a name="How-do-I-setup-auto_002dcompletion-of-command-line-options_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#How-do-2-people-use-Coot-with-the-same-structure_003f" accesskey="n" rel="next">How do 2 people use Coot with the same structure?</a>, Previous: <a href="#How-do-I-read-many-PDB-files-on-the-command-line_003f" accesskey="p" rel="previous">How do I read many PDB files on the command line?</a>, Up: <a href="#Using-Coot" accesskey="u" rel="up">Using Coot</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="How-do-I-setup-auto_002dcompletion-of-command-line-options_003f-1"></a>
+<h3 class="section">4.32 How do I setup auto-completion of command line options?</h3>
+
+<p>For tcsh, add this to you <tt>$HOME/.tcshrc</tt> (or <tt>$HOME/.cshrc</tt> file, if that&rsquo;s what you use):
+</p>
+<pre class="verbatim">set noglob
+  complete coot  \
+        n/--coords/f:*{.pdb,.res,.brk,.brk.gz,.ent,.ent.gz,.pdb.gz}/ \
+        n/--data/f:*{.mtz,.cif,.fcf}/ \
+        n/--auto/f:*.mtz/ \
+        n/--script/f:*{.scm,.py}/ \
+        c/--/&quot;(data auto coords script small no-graphics no-state-script)&quot;/
+unset noglob
+</pre>
+
+<hr>
+<a name="How-do-2-people-use-Coot-with-the-same-structure_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#How-do-I-find-CIS_002dpeptides-in-my-structure_003f" accesskey="n" rel="next">How do I find CIS-peptides in my structure?</a>, Previous: <a href="#How-do-I-setup-auto_002dcompletion-of-command-line-options_003f" accesskey="p" rel="previous">How do I setup auto-completion of command line options?</a>, Up: <a href="#Using-Coot" accesskey="u" rel="up">Using Coot</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="How-do-2-people-use-Coot-with-the-same-structure_003f-1"></a>
+<h3 class="section">4.33 How do 2 people use Coot with the same structure?</h3>
+
+<p>The issue here is the backup directory coot-backup. By default, it
+is created with strict permissions. I would recommend creating a
+directory to which you both can write and <code>setenv
+COOT_BACKUP_DIR</code> to that directory.
+</p>
+<hr>
+<a name="How-do-I-find-CIS_002dpeptides-in-my-structure_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#How-do-I-do-a-superposition-on-just-a-part-of-my-structure_003f" accesskey="n" rel="next">How do I do a superposition on just a part of my structure?</a>, Previous: <a href="#How-do-2-people-use-Coot-with-the-same-structure_003f" accesskey="p" rel="previous">How do 2 people use Coot with the same structure?</a>, Up: <a href="#Using-Coot" accesskey="u" rel="up">Using Coot</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="How-do-I-find-CIS_002dpeptides-in-my-structure_003f-1"></a>
+<h3 class="section">4.34 How do I find CIS-peptides in my structure?</h3>
+
+<p><code>Extensions -&gt; Modelling -&gt; Residues with CIS Peptide Bonds</code>
+</p>
+
+<hr>
+<a name="How-do-I-do-a-superposition-on-just-a-part-of-my-structure_003f"></a>
+<div class="header">
+<p>
+Previous: <a href="#How-do-I-find-CIS_002dpeptides-in-my-structure_003f" accesskey="p" rel="previous">How do I find CIS-peptides in my structure?</a>, Up: <a href="#Using-Coot" accesskey="u" rel="up">Using Coot</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="How-do-I-do-a-superposition-on-just-a-part-of-my-structure_003f-1"></a>
+<h3 class="section">4.35 How do I do a superposition on just a part of my structure?</h3>
+
+<p>There are a number of solutions, depending on the problem
+</p>
+
+<ul>
+<li> SSM superposition by atom selection
+
+<p>The command is:
+</p>
+<ul>
+<li> <code>(superpose-with-atom-selection <em>imol-1</em> <em>imol-2</em> <em>atom-selection-string-1</em> <em>atom-selection-string-2</em> <em>move-copy-flag</em>)</code>
+</li></ul>
+
+<p>where:
+</p>
+<p><code><em>imol-1</em></code> is the molecule number of the reference atoms
+</p>
+<p><code><em>imol-2</em></code> is the molecule number of the molecule to be moved
+</p>
+<p>the selection strings are mmdb atom selection string
+</p>
+<p>the <code><em>move-copy-flag</em></code> is either 1 or 0 signalling if a copy
+ of the <code><em>imol-2</em></code> molecule should be moved (or the
+ <code><em>imol-2</em></code> molecule itself).
+</p>
+<p>Typical usage might be: 
+</p>
+<div class="lisp">
+<pre class="lisp">        (superpose-with-atom-selection 0 1 &quot;//A/20-80&quot; &quot;//B/30-90&quot; 1)
+</pre></div>
+
+
+</li><li> multi-range LSQ superposition
+
+<p>You can add any number of LSQ matches using 
+</p>
+
+<p><code>(add-lsq-match <em>resno-start-ref</em> <em>resno-end-ref</em>
+ <em>chain-id-ref</em>
+ <em>resno-start-moving</em> <em>resno-end-moving</em> 
+ <em>chain-id-moving</em> 
+<em>match-type</em> 
+ )</code>
+</p>
+<p>where 
+</p>
+<p><code><em>match-type</em></code> is 0 for all-atom, 1 for mainchain and 2 for CAs.
+</p>
+<p>For example:
+</p>
+<div class="lisp">
+<pre class="lisp">        (clear-lsq-matches)
+        (add-lsq-match 120 180 &quot;A&quot; 130 190 &quot;B&quot; 2)
+        (add-lsq-match 220 280 &quot;A&quot; 230 290 &quot;B&quot; 2)
+        (apply-lsq-matches)
+
+</pre></div>
+
+
+</li><li> Ligand superposition
+
+<p>Ligand superposition is performed using a graph-based match -
+<em>i.e.</em> there is no need to have matching atom names.
+</p>
+<p><code>(overlap-ligands <em>imol-ligand</em> <em>imol-ref</em> <em>chain-id-ref</em> <em>resno-ref</em>)</code>
+</p>
+<p>this presumes that there is only the ligand in the <code><em>imol-ligand</em></code> molecule.
+</p>
+<p>Typical usage:
+</p>
+
+<div class="lisp">
+<pre class="lisp">        (overlap-ligands 2 1 &quot;A&quot; 50)
+</pre></div>
+
+
+</li></ul>
+
+
+
+
+
+
+<hr>
+<a name="Other-Coot-Information"></a>
+<div class="header">
+<p>
+Previous: <a href="#Using-Coot" accesskey="p" rel="previous">Using Coot</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="Other-Coot-Information-1"></a>
+<h2 class="chapter">5 Other Coot Information</h2>
+
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="#Coot-for-Microsoft-Windows-systems_003f" accesskey="1">Coot for Microsoft Windows systems?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#What-database-do-you-use-for-the-Ramachandran-plot_003f" accesskey="2">What database do you use for the Ramachandran plot?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#What-library-do-you-use-for-the-Rotamers_003f" accesskey="3">What library do you use for the Rotamers?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-do-I-search-the-Manuals-and-the-Mailing-list-Archive_003f" accesskey="4">How do I search the Manuals and the Mailing list Archive?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#What-do-those-abreviations-mean_003f" accesskey="5">What do those abreviations mean?</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+
+<hr>
+<a name="Coot-for-Microsoft-Windows-systems_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#What-database-do-you-use-for-the-Ramachandran-plot_003f" accesskey="n" rel="next">What database do you use for the Ramachandran plot?</a>, Up: <a href="#Other-Coot-Information" accesskey="u" rel="up">Other Coot Information</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="Coot-for-Microsoft-Windows-systems_003f-1"></a>
+<h3 class="section">5.1 Coot for Microsoft Windows systems?</h3>
+
+<p>Bernhard Lohkamp has a web page for WinCoot <a href="http://bernhardcl.github.io/coot/">http://bernhardcl.github.io/coot/</a>.
+</p>
+<hr>
+<a name="What-database-do-you-use-for-the-Ramachandran-plot_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#What-library-do-you-use-for-the-Rotamers_003f" accesskey="n" rel="next">What library do you use for the Rotamers?</a>, Previous: <a href="#Coot-for-Microsoft-Windows-systems_003f" accesskey="p" rel="previous">Coot for Microsoft Windows systems?</a>, Up: <a href="#Other-Coot-Information" accesskey="u" rel="up">Other Coot Information</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="What-database-do-you-use-for-the-Ramachandran-plot_003f-1"></a>
+<h3 class="section">5.2 What database do you use for the Ramachandran plot?</h3>
+
+<p>Coot uses clipper&rsquo;s Ramachadran data - which is the Richardson&rsquo;s
+Top500: <a href="http://kinemage.biochem.duke.edu/databases/top500.php">http://kinemage.biochem.duke.edu/databases/top500.php</a>
+</p>
+<hr>
+<a name="What-library-do-you-use-for-the-Rotamers_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#How-do-I-search-the-Manuals-and-the-Mailing-list-Archive_003f" accesskey="n" rel="next">How do I search the Manuals and the Mailing list Archive?</a>, Previous: <a href="#What-database-do-you-use-for-the-Ramachandran-plot_003f" accesskey="p" rel="previous">What database do you use for the Ramachandran plot?</a>, Up: <a href="#Other-Coot-Information" accesskey="u" rel="up">Other Coot Information</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="What-library-do-you-use-for-the-Rotamers_003f-1"></a>
+<h3 class="section">5.3 What library do you use for the Rotamers?</h3>
+
+<p>The Richardsons&rsquo; (Son of Penultimate) Rotamer Library.
+</p>
+<hr>
+<a name="How-do-I-search-the-Manuals-and-the-Mailing-list-Archive_003f"></a>
+<div class="header">
+<p>
+Next: <a href="#What-do-those-abreviations-mean_003f" accesskey="n" rel="next">What do those abreviations mean?</a>, Previous: <a href="#What-library-do-you-use-for-the-Rotamers_003f" accesskey="p" rel="previous">What library do you use for the Rotamers?</a>, Up: <a href="#Other-Coot-Information" accesskey="u" rel="up">Other Coot Information</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="How-do-I-search-the-Manuals-and-the-Mailing-list-Archive_003f-1"></a>
+<h3 class="section">5.4 How do I search the Manuals and the Mailing list Archive?</h3>
+
+<p>By using google. For example, if you wanted to make a search for
+Coot&rsquo;s &quot;virtual trackball&quot;, use the google search:
+</p>
+<p><tt>virtual trackball coot site:www2.mrc-lmb.cam.ac.uk</tt>
+</p>
+
+<hr>
+<a name="What-do-those-abreviations-mean_003f"></a>
+<div class="header">
+<p>
+Previous: <a href="#How-do-I-search-the-Manuals-and-the-Mailing-list-Archive_003f" accesskey="p" rel="previous">How do I search the Manuals and the Mailing list Archive?</a>, Up: <a href="#Other-Coot-Information" accesskey="u" rel="up">Other Coot Information</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<a name="What-do-those-abreviations-mean_003f-1"></a>
+<h3 class="section">5.5 What do those abreviations mean?</h3>
+
+<ul>
+<li> HTH : Hope This Helps
+</li><li> FYI : For Your Information
+</li><li> FWIW: For What It&rsquo;s Worth
+</li><li> AFAIR: As Far As I Recall
+</li></ul>
+
+
+
+     
+ 
+<hr>
+
+
+
+</body>
+</html>

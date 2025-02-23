@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Coot Cryo-EM Tutorial 2: Fitting and Mutating | Coot Development Blog</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Coot Cryo-EM Tutorial 2: Fitting and Mutating" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="By Ana Casa&ntilde;al &amp; Paul Emsley This tutorial is designed for 0.9.1 or later." />
+<meta property="og:description" content="By Ana Casa&ntilde;al &amp; Paul Emsley This tutorial is designed for 0.9.1 or later." />
+<link rel="canonical" href="//coot/blog/2020/10/20/Coot-Cryo-EM-main.html" />
+<meta property="og:url" content="//coot/blog/2020/10/20/Coot-Cryo-EM-main.html" />
+<meta property="og:site_name" content="Coot Development Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-10-20T16:53:52+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Coot Cryo-EM Tutorial 2: Fitting and Mutating" />
+<script type="application/ld+json">
+{"description":"By Ana Casa&ntilde;al &amp; Paul Emsley This tutorial is designed for 0.9.1 or later.","url":"//coot/blog/2020/10/20/Coot-Cryo-EM-main.html","@type":"BlogPosting","headline":"Coot Cryo-EM Tutorial 2: Fitting and Mutating","dateModified":"2020-10-20T16:53:52+00:00","datePublished":"2020-10-20T16:53:52+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"//coot/blog/2020/10/20/Coot-Cryo-EM-main.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/coot/assets/main.css"><link type="application/atom+xml" rel="alternate" href="//coot/feed.xml" title="Coot Development Blog" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/coot/">Coot Development Blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/coot/about/">About</a><a class="page-link" href="/coot/">Coot</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Coot Cryo-EM Tutorial 2: Fitting and Mutating</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2020-10-20T16:53:52+00:00" itemprop="datePublished">Oct 20, 2020
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <div style="text-align: right"> By Ana Casa&ntilde;al &amp; Paul Emsley</div>
+<p>This tutorial is designed for 0.9.1 or later.</p>
+
+<p>Aim: we will fit a domain of the Cleavage and Polyadenylation Factor</p>
+
+<h2 id="1-setting-up">1: Setting Up</h2>
+
+<h3 id="11-fetch-the-files">1.1 Fetch the Files</h3>
+
+<p>Using a web browser, download the bundle for EMD-3908</p>
+
+<ul>
+  <li><a href="http://www.ebi.ac.uk/pdbe/entry/emdb/EMD-3908">http://www.ebi.ac.uk/pdbe/entry/emdb/EMD-3908</a></li>
+</ul>
+
+<p>Move that tar file here and extract it.</p>
+
+<p>Let’s download the sequence of a fragment of the structure:</p>
+
+<ul>
+  <li><a href="https://www2.mrc-lmb.cam.ac.uk/personal/pemsley/coot/files/CPF-X-domain.seq">https://www2.mrc-lmb.cam.ac.uk/personal/pemsley/coot/files/CPF-X-domain.seq</a></li>
+</ul>
+
+<p>Move that sequence file to the current directory (for easy access).</p>
+
+<p>Start <em>Coot</em>:</p>
+
+<p><code class="language-plaintext highlighter-rouge">$ coot --map EMD-3908/map/emd_3908.map</code></p>
+
+<h3 id="12-map-manipulation">1.2 Map Manipulation</h3>
+
+<p>Let’s see more of the map</p>
+
+<ul>
+  <li><strong>Edit</strong> → <strong>Map Parameters</strong> → <strong>Map Radius EM</strong> → <code class="language-plaintext highlighter-rouge">70</code></li>
+  <li><strong>OK</strong></li>
+</ul>
+
+<p>Let’s use a smoother map</p>
+
+<ul>
+  <li><strong>Calculate</strong> → <strong>Modules</strong> → <strong>Cryo-EM</strong></li>
+  <li><strong>Cryo-EM</strong> → <strong>Sharpen/Blur…</strong></li>
+  <li>activate the “Resample” checkbutton</li>
+  <li><strong>Make Map</strong></li>
+  <li><strong>Close</strong></li>
+</ul>
+
+<p>You should now have an extra map (“emd_3908.map Blur 20.00”).
+Compare this maps with the original. You should find that the
+new (smooth) map is easier to understand.</p>
+
+<ul>
+  <li>use the <strong>Display Manager</strong> to delete the first (mrc) map.</li>
+</ul>
+
+<p>Change the contour Step for the new Maps:</p>
+
+<p><strong>Display Manager</strong> → <strong>Properties</strong> → <strong>Change by rmsd</strong> <code class="language-plaintext highlighter-rouge">0.33</code> → <strong>OK</strong></p>
+
+<p>As a rule of thumb, a good default/starting contour level is 5.5 rmsd.</p>
+
+<h3 id="13-get-the-homolog">1.3 Get the Homolog:</h3>
+
+<ul>
+  <li><strong>File</strong> → <strong>Open Coordinates…</strong> <code class="language-plaintext highlighter-rouge">coot_tutorial_2/6f9n.pdb</code></li>
+  <li>if <em>Coot</em> gives you a “Nomenclature Errors” dialog, just click “Cancel”</li>
+  <li>Use the <strong>Display Manager</strong> to change the representation</li>
+  <li>Instead of “Bonds (Colour by Atom)” use “C-alphas/Backbone”</li>
+</ul>
+
+<p>Move back to the middle of the molecule map</p>
+
+<ul>
+  <li>
+    <p><strong>Cryo-EM</strong> → <strong>Go To Map Molecule Middle</strong></p>
+  </li>
+  <li>Now move the homolog to here (the centre of the map):</li>
+  <li><strong>Calculate</strong> → <strong>Move Molecule Here</strong></li>
+  <li>Choose the “6f9n” molecule</li>
+  <li><strong>Move It</strong></li>
+</ul>
+
+<p>You can now change the colo(u)rs if you wish:</p>
+<ul>
+  <li><strong>Display Manager</strong> → <strong>Properties</strong> → <strong>Colour</strong></li>
+  <li><strong>Edit</strong> → <strong>Bond Colours</strong> [slide the slider]</li>
+</ul>
+
+<p>I like to work with a blue map and the model as orange or green (this is good colour scheme
+for working but not good for screenshots used in presentations).</p>
+
+<h2 id="2-jiggle">2: Jiggle</h2>
+
+<ul>
+  <li><strong>Morph</strong> → <strong>Jiggle Fit This Molecule with Fourier Filter</strong></li>
+</ul>
+
+<p>It should roughly fit now. If it doesn’t, try jiggling again once or twice more.</p>
+
+<h2 id="3-extract-our-fragment">3: Extract Our Fragment</h2>
+
+<p>Extract the worst-fitting (WD40) domain:</p>
+
+<ul>
+  <li>You can see that there are 2 chains.</li>
+  <li>We want to extract a wD40 domain from the larger A chain</li>
+  <li>Using <strong>Jones’ Rainbow</strong>, find the domain start and end residues numbers (you are trying
+to find a doughnut-shaped molecule that fits this doughnut-shaped density)</li>
+  <li>Let’s imagine that you think that the residues at the ends of the domain are 517 and 1011:</li>
+  <li><strong>Edit</strong> → <strong>Copy Fragment</strong> → [Use 6f9n molecule:] <code class="language-plaintext highlighter-rouge">//A/517-1011</code> → <strong>OK</strong></li>
+</ul>
+
+<p>Let’s work on this fragment:</p>
+
+<ul>
+  <li><strong>Display Manager</strong> → <strong>Last Only</strong></li>
+  <li><strong>Reset View</strong></li>
+</ul>
+
+<p>Let’s delete the sidechains from the atom selection molecule (number 4 usually):</p>
+
+<ul>
+  <li><strong>Calculate</strong> → <strong>Modelling</strong> → <strong>Delete Side-chains for Active Chain</strong></li>
+</ul>
+
+<p>For the most recent model (bottom of the list), in the <strong>Display Manager</strong> use</p>
+
+<ul>
+  <li><strong>C-alphas/Backbone</strong></li>
+  <li><strong>OK</strong> [Dismiss the Display Manager]</li>
+</ul>
+
+<h2 id="4-setup-refinement">4: Setup Refinement</h2>
+
+<p>We need to adjust the weighting of the map to the model:</p>
+
+<ul>
+  <li>
+    <p><strong>R/RC</strong> → <strong>Refinement Weight</strong> → <code class="language-plaintext highlighter-rouge">60.00</code> → <strong>OK</strong>
+(don’t click “Estimate” we need tighter weights at the moment)</p>
+
+    <p>Let’s add some local distance restraints:</p>
+  </li>
+  <li>
+    <p><strong>Calculate</strong> → <strong>Modules</strong> → <strong>Restraints</strong></p>
+
+    <p>Usually 5.0A works well for models with no sidechains:</p>
+  </li>
+  <li><strong>Restaints</strong> → <strong>Generate All Molecule Self Restraints 5.0</strong></li>
+  <li><em>{Coot displays new self-restraints as thin grey lines}</em>
+Briefly look at these restraints, then undisplay them:</li>
+  <li>
+    <p><strong>Restaints</strong> → <strong>Undisplay Extra Distance Restraints</strong></p>
+
+    <p>Let’s tighten up the Geman-McClure restraints a bit:</p>
+  </li>
+  <li><strong>Refine</strong> → <strong>Set Geman-McClure alpha 0.01</strong></li>
+</ul>
+
+<h2 id="5-refinement">5: Refinement</h2>
+
+<p>This is where the power of <em>Coot</em> 0.9 becomes apparent.</p>
+
+<p><em>{I’d like to
+note here that on a modern computer with multiple cores and threads,
+this is a pleasant experience. If that is not like your computer then
+the following section can be confusing and frustrating}</em></p>
+
+<ul>
+  <li><strong>Refine</strong> → <strong>Chain Refine</strong></li>
+  <li>{wait and watch, you can turn the view if you wish (be careful not
+ to click an atom)… this takes about 20 seconds on my computer
+ (a PC from 2019)}</li>
+  <li>When the refinement dialog says “Success”:</li>
+  <li><strong>Accept</strong>
+  Now let’s refine again with less tight Geman-McClure restraints:</li>
+  <li><strong>Refine</strong> → <strong>Set Geman-McClure alpha 0.1</strong></li>
+  <li><strong>Refine</strong> → <strong>Chain Refine</strong></li>
+  <li><em>{wait and watch ~10 seconds}</em></li>
+</ul>
+
+<p><em>{A note on “yanking”: by which I mean “smooth displacement” - not jerky shifts}</em></p>
+
+<p>When the refinement dialog says “Success,” this time we don’t yet
+press Accept…  Examine the model, being careful not to inadvertently
+pull on an atom. Maybe you will see that there is a region that
+doesn’t fit, if so, yank on the worst fitting CA and pull it to where
+you think it should go.</p>
+
+<ul>
+  <li>Double-clicking on an atom will release the pull restraint</li>
+</ul>
+
+<p>When you are happy, dismiss the Refinement dialog:</p>
+
+<ul>
+  <li><strong>Accept</strong></li>
+</ul>
+
+<h3 id="51-redo">5.1 Redo</h3>
+
+<p>It can be non-trivial to decide what needs to move and how to move
+it. It is worth undoing your modifications and refining again for
+practice.</p>
+
+<p>This time perhaps with the distance restraints shown:</p>
+
+<ul>
+  <li>Undo (left-facing arrow icon)</li>
+  <li><strong>Calculate</strong> → <strong>Scripting</strong> → <strong>Python</strong></li>
+  <li><code class="language-plaintext highlighter-rouge">set_draw_moving_atoms_restraints(1)</code></li>
+  <li><strong>Refine</strong> → <strong>Chain Refine</strong></li>
+  <li><em>yank as needed</em></li>
+  <li><strong>OK</strong></li>
+</ul>
+
+<p>… or with different cut-off for the Geman-McClure restraints, or a
+different alpha for the Geman-McClure restraints, or a different
+weight for the map. Or a different blur for the map. You can delete
+the current extra restraints with <strong>Restraints</strong> → <strong>Delete All
+Extra Restraints</strong>.</p>
+
+<ul>
+  <li>
+    <p>Try proportial editing: with the Real Space Refinement active, use Ctrl Middle-mouse scroll
+to change the radius of the atoms affected by the atom pull displacement.</p>
+  </li>
+  <li>
+    <p>Test, play, refine, yank until satisfied.</p>
+  </li>
+</ul>
+
+<p>Reset Geman-McClure alpha to 1:</p>
+
+<ul>
+  <li><strong>Refine</strong> → <strong>Set Geman-McClure alpha 1</strong></li>
+</ul>
+
+<h2 id="6-review-and-trim">6: Review and Trim</h2>
+
+<p>Upon review, you will notice that there are parts of the model that
+don’t fit the map. Try yanking them around with Tandem Refine. Other
+parts of the model don’t have density - so delete the residue range -
+this may help the alignment we are about to do.</p>
+
+<p>Maybe the density fit validation dialog will be useful? You might need
+to reset the weight: <code class="language-plaintext highlighter-rouge">1.5</code> seems like a good number</p>
+
+<ul>
+  <li><strong>Validate</strong> → <strong>Density Fit Analysis</strong> [Choose the “atom selection from pdb6f9n”
+molecule]</li>
+</ul>
+
+<h2 id="7-mutate">7: Mutate</h2>
+
+<p>This is <em>Coot’s</em> version of “Homology Modelling” - except that the model geometry
+optimization occurs in the context of the experiemental data:</p>
+
+<ul>
+  <li>We have finished with the “Self Restraints” - let’s delete them:</li>
+  <li><strong>Restraints</strong> → <strong>Delete Extra Restraints</strong></li>
+  <li>Coot displays a molecule chooser dialog:</li>
+  <li>Select the “atom selection from pdb6f9n.ent” molecule</li>
+  <li>
+    <p><strong>OK</strong></p>
+  </li>
+  <li>
+    <p><strong>Calculate → Use ClustalW for Alignment, Then Mutate</strong></p>
+
+    <p>The chain for mutation is the “atom selection from pdb6f9n.ent” and the
+target sequence is in the file <code class="language-plaintext highlighter-rouge">CPF-X-domain.seq</code></p>
+  </li>
+  <li><em>{wait}</em></li>
+  <li><strong>Refine</strong> → <strong>Chain Refine</strong></li>
+  <li><em>{wait}</em></li>
+  <li><strong>OK</strong></li>
+</ul>
+
+<h2 id="8-check--edit">8: Check &amp; Edit</h2>
+
+<p>Go through the structure residue by residue looking for things to fix (this can take
+some time, so you might just do a few, for a flavour, before moving onto Section 8.2)</p>
+
+<h3 id="81-do-some-fix-ups">8.1 Do some Fix-ups</h3>
+
+<ul>
+  <li>Out of register errors</li>
+  <li>Missing side-chains</li>
+  <li>Missing loops</li>
+  <li>Loops with too many residues in the model</li>
+  <li>Bad rotamers</li>
+  <li>Bad peptides</li>
+  <li>Clashes</li>
+  <li>Use: <strong>Validate</strong> → <strong>Alignment vs. PIR…</strong> to help you adjust the residue numbers</li>
+</ul>
+
+<p>There will be places where you need to close (or open) a loop by renumbering residues.</p>
+
+<ul>
+  <li>
+    <p>Use <strong>Validate → Validation Outliers</strong></p>
+
+    <p>or</p>
+  </li>
+  <li>
+    <p><strong>Validate → Overlaps, Peptides, CBeta, Rama and Rota Outliers</strong></p>
+  </li>
+</ul>
+
+<p>Side chains atoms can be added the residue at the centre of the screen using “K”
+and deleted using “Shift K”.</p>
+
+<h3 id="82-unclash">8.2 Unclash</h3>
+
+<p>Part of the work on the refinement has been to change the way non-bonded contacts
+are minimized. To reduce/remove atom overlaps (or “Clashes” as Molprobity would
+call them)</p>
+
+<ul>
+  <li>First determine the model number of the domain we are fixing - for me it’s <code class="language-plaintext highlighter-rouge">2</code></li>
+  <li>and now add hydrogen atoms to that model:</li>
+  <li><strong>Calculate</strong> → <strong>Scripting</strong> → <strong>Python</strong></li>
+  <li><code class="language-plaintext highlighter-rouge">coot_reduce(2)</code></li>
+  <li><strong>Refine</strong> → <strong>Chain Refine</strong></li>
+  <li><em>{wait - this takes a lot longer than before - there are lots of interactions now}</em></li>
+  <li><strong>Accept</strong></li>
+</ul>
+
+<p><em>{For your notes, don’t act on this now, to delete the hydrogen atoms, use the Python
+  scripting function <code class="language-plaintext highlighter-rouge">delete_hydrogens(4)</code> (or whatever your model number is)}</em></p>
+
+<h3 id="83-ramachandran-outliers">8.3 Ramachandran Outliers</h3>
+
+<p>It can be convenient to use Ramachandran Restraints to improve the model validation. This
+is how I do it:</p>
+
+<ul>
+  <li>Click the <strong>R/RC</strong> button</li>
+  <li>Tick <strong>Use Torsion Restraints</strong></li>
+  <li>Tick <strong>Ramachandran Restraints</strong></li>
+  <li><strong>OK</strong></li>
+  <li><strong>Validate</strong> → <strong>Ramachandran Plot</strong> [and chose the “atom selection” molecule]</li>
+  <li><strong>Outliers Only</strong></li>
+</ul>
+
+<p>Now click on a red spot - they may be many of them (maybe 50 or so):</p>
+
+<ul>
+  <li>Look at the model. Sometimes the outlier is problematic because there is a model-building
+error - you should not attempt to fix such problems using Ramachandran restraints.</li>
+  <li>But sometimes, things are good, it’s just that the main-chain torsion angles need
+tweaking:</li>
+  <li><strong>Tandem Refine</strong></li>
+  <li>Now flipping and back-flipping on This Peptide or the Next Peptide often fixes the
+problem.</li>
+  <li>If needed you can change the Ramachandran restraints weight using the menu items
+in the Refine menu. (But note however, that <em>Coot</em> often gets upset when the
+Ramachandran weights are high.)</li>
+</ul>
+
+<h2 id="9-done">9: Done</h2>
+
+<p>You can check how well you did by comparing against the reference model - the accession code
+for that is 6oej <code class="language-plaintext highlighter-rouge">coot_tutorial_2/3eoj.pdb</code></p>
+
+  </div><a class="u-url" href="/coot/blog/2020/10/20/Coot-Cryo-EM-main.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/coot/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Coot Development Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Coot Development Blog</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/pemsley"><svg class="svg-icon"><use xlink:href="/coot/assets/minima-social-icons.svg#github"></use></svg> <span class="username">pemsley</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Coot updates and screenshots</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

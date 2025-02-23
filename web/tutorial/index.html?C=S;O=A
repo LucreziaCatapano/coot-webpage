@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /personal/pemsley/coot/web/tutorial</title>
+ </head>
+ <body>
+<h1>Index of /personal/pemsley/coot/web/tutorial</h1>
+  <table>
+   <tr><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=D">Size</a></th><th><a href="?C=D;O=A">Description</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td><a href="/personal/pemsley/coot/web/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td><a href="images/">images/</a></td><td align="right">2023-03-22 01:01  </td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td><a href="rnase-A.pir">rnase-A.pir</a></td><td align="right">2013-07-12 15:25  </td><td align="right">136 </td><td>&nbsp;</td></tr>
+<tr><td><a href="parathyroid-hormone.pir">parathyroid-hormone.pir</a></td><td align="right">2022-08-27 17:55  </td><td align="right">146 </td><td>&nbsp;</td></tr>
+<tr><td><a href="J-chain.seq">J-chain.seq</a></td><td align="right">2018-05-03 12:38  </td><td align="right">366 </td><td>&nbsp;</td></tr>
+<tr><td><a href="ligand-fitting-sequence.pir">ligand-fitting-sequence.pir</a></td><td align="right">2013-07-12 15:25  </td><td align="right">432 </td><td>&nbsp;</td></tr>
+<tr><td><a href="CootCryoEMPractical.html">CootCryoEMPractical.html</a></td><td align="right">2019-08-08 19:48  </td><td align="right">1.8K</td><td>&nbsp;</td></tr>
+<tr><td><a href="prodrg-DRG.pdb">prodrg-DRG.pdb</a></td><td align="right">2013-07-12 15:25  </td><td align="right">2.3K</td><td>&nbsp;</td></tr>
+<tr><td><a href="monomer-3GP.pdb">monomer-3GP.pdb</a></td><td align="right">2013-07-12 15:25  </td><td align="right">3.3K</td><td>&nbsp;</td></tr>
+<tr><td><a href="dot-coot">dot-coot</a></td><td align="right">2013-07-12 15:25  </td><td align="right">5.7K</td><td>&nbsp;</td></tr>
+<tr><td><a href="prodrg-DRG.cif">prodrg-DRG.cif</a></td><td align="right">2013-07-12 15:25  </td><td align="right">6.8K</td><td>&nbsp;</td></tr>
+<tr><td><a href="acedrg-DRG.cif">acedrg-DRG.cif</a></td><td align="right">2017-10-25 02:02  </td><td align="right">7.3K</td><td>&nbsp;</td></tr>
+<tr><td><a href="Coot-Cryo-EM-basics.html">Coot-Cryo-EM-basics.html</a></td><td align="right">2019-08-08 19:54  </td><td align="right">9.1K</td><td>&nbsp;</td></tr>
+<tr><td><a href="Coot-Cryo-EM.html">Coot-Cryo-EM.html</a></td><td align="right">2019-08-08 19:45  </td><td align="right"> 11K</td><td>&nbsp;</td></tr>
+<tr><td><a href="Coot-Cryo-EM-main.html">Coot-Cryo-EM-main.html</a></td><td align="right">2021-08-12 05:00  </td><td align="right"> 18K</td><td>&nbsp;</td></tr>
+<tr><td><a href="validation-tutorial.pdf">validation-tutorial.pdf</a></td><td align="right">2017-10-24 23:59  </td><td align="right"> 35K</td><td>&nbsp;</td></tr>
+<tr><td><a href="ligand-fitting-tutorial.pdf">ligand-fitting-tutorial.pdf</a></td><td align="right">2017-10-24 23:59  </td><td align="right"> 45K</td><td>&nbsp;</td></tr>
+<tr><td><a href="tutorial-2.pdf">tutorial-2.pdf</a></td><td align="right">2013-07-12 15:25  </td><td align="right"> 46K</td><td>&nbsp;</td></tr>
+<tr><td><a href="model-building-and-refinement-v2.pdf">model-building-and-refinement-v2.pdf</a></td><td align="right">2018-08-31 14:29  </td><td align="right"> 94K</td><td>&nbsp;</td></tr>
+<tr><td><a href="tutorial-modern.pdb">tutorial-modern.pdb</a></td><td align="right">2013-07-12 15:25  </td><td align="right">124K</td><td>&nbsp;</td></tr>
+<tr><td><a href="ed-lowe-mb.docx">ed-lowe-mb.docx</a></td><td align="right">2016-10-17 18:56  </td><td align="right">155K</td><td>&nbsp;</td></tr>
+<tr><td><a href="tutorial.pdf">tutorial.pdf</a></td><td align="right">2022-10-19 04:08  </td><td align="right">345K</td><td>&nbsp;</td></tr>
+<tr><td><a href="tutorial-embo.pdf">tutorial-embo.pdf</a></td><td align="right">2015-08-27 12:08  </td><td align="right">381K</td><td>&nbsp;</td></tr>
+<tr><td><a href="coot-shelx.pdf">coot-shelx.pdf</a></td><td align="right">2022-08-27 01:24  </td><td align="right">425K</td><td>&nbsp;</td></tr>
+<tr><td><a href="NAG-fitting-A13-ASN-pdb3le7.pdb">NAG-fitting-A13-ASN-pdb3le7.pdb</a></td><td align="right">2013-07-12 15:25  </td><td align="right">435K</td><td>&nbsp;</td></tr>
+<tr><td><a href="32143-partial-model.pdb">32143-partial-model.pdb</a></td><td align="right">2022-08-27 17:55  </td><td align="right">458K</td><td>&nbsp;</td></tr>
+<tr><td><a href="ligand-fitting-no-ligand.pdb">ligand-fitting-no-ligand.pdb</a></td><td align="right">2013-07-12 15:25  </td><td align="right">516K</td><td>&nbsp;</td></tr>
+<tr><td><a href="rnasa-1.8-all_refmac1.mtz">rnasa-1.8-all_refmac1.mtz</a></td><td align="right">2013-07-12 15:25  </td><td align="right">914K</td><td>&nbsp;</td></tr>
+<tr><td><a href="5xtb-sans-J.pdb">5xtb-sans-J.pdb</a></td><td align="right">2018-05-03 03:38  </td><td align="right">1.9M</td><td>&nbsp;</td></tr>
+<tr><td><a href="NAG-fitting-pdb3le7.mtz">NAG-fitting-pdb3le7.mtz</a></td><td align="right">2013-07-12 15:25  </td><td align="right">2.7M</td><td>&nbsp;</td></tr>
+<tr><td><a href="ligand-fitting.mtz">ligand-fitting.mtz</a></td><td align="right">2013-07-12 15:25  </td><td align="right">2.9M</td><td>&nbsp;</td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+</body></html>

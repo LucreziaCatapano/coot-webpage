@@ -1,0 +1,39 @@
+body {
+    background-color: #f0f0f0; /* Light background color */
+    font-family: Roboto, sans-serif; /* Font styling */
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #4f6792;
+}
+
+h3 {
+    font-size: 1.5em;
+    color: #4f6792;
+}
+
+.image-gallery {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: left; /* Center the images */
+    gap: 10px; /* Space between images */
+}
+
+.image-gallery a {
+    display: inline-block; /* Treat links as block elements for spacing */
+}
+
+.image-gallery img {
+    width: 150px; /* Set width for thumbnails */
+    height: auto; /* Maintain aspect ratio */
+    border: 2px solid #cccccc; /* Light border for thumbnails */
+    border-radius: 5px; /* Rounded corners for thumbnails */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Shadow effect for thumbnails */
+}
+
+.image-gallery img:hover {
+    opacity: 0.8; /* Slightly darken images on hover */
+}
