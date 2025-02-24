@@ -19,6 +19,10 @@
 [![Coot Image 8](coot1/coot1_8.png)](coot1/coot1_8.png)
 [![Coot Image 9](coot1/coot1_9.png)](coot1/coot1_9.png)
 [![Coot Image 10](coot1/coot1_10.png)](coot1/coot1_10.png)
+[![Coot Image 11](coot1/coot1_11.png)](coot1/coot1_11.png)
+[![Coot Image 12](coot1/coot1_12.png)](coot1/coot1_12.png)
+[![Coot Image 13](coot1/coot1_13.png)](coot1/coot1_13.png)
+[![Coot Image 14](coot1/coot1_14.png)](coot1/coot1_14.png)
 
 </div>
 
@@ -34,7 +38,7 @@
 
 </div>
 
-### Coot 0.9.x and pre
+### Coot 0.0 to 0.9.x
 
 <div class="image-gallery">
 
