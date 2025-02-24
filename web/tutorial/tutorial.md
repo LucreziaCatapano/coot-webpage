@@ -7,7 +7,12 @@
 ::: tutorial-content
 ### X-ray tutorials
 
-Coot version 0.9.x and pre:
+**Coot 1.1:**
+
+[Basic Navigation - Mouse & Keyboard Shortcuts](coot1_keybindings.html)
+
+
+**Coot version 0.9.x and pre:**
 
 * [Coot Tutorial 2023-2025](https://pemsley.github.io/coot/blog/2023/05/05/coot-tutorial-in-2023.html)
 
@@ -27,7 +32,7 @@ Coot version 0.9.x and pre:
 
 ### cryo-EM tutorials
 
-Coot version 0.9.x and pre:
+**Coot version 0.9.x and pre:**
 
 * [Coot Cryo-EM Tutorial 2022: Part 1: Using An AlphaFold2 Model](https://pemsley.github.io/coot/blog/2022/08/27/Coot-Cryo-EM-Tutorial-Part-1.html)
 
